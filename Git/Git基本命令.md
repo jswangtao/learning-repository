@@ -34,7 +34,7 @@
 ### 分支管理
 - git branch test(分支名) 创建新分支
 - git checkout test      切换分支
-- git branch    		 查看分支
+- git branch    		 查找分支
 - git checkout master    切换主分支
 - git merge test         合并分支
 - git branch -d test     删除分支
