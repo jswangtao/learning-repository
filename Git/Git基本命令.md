@@ -1,3 +1,6 @@
+# Git
+![git工作原理图]("./images/git_three_rigon.png"  )
+
 # Git 基本命令
 
 ## 创建库
@@ -18,7 +21,8 @@
 > 工作区、暂存区、本地库 
 - git status               查看库的状态
 - git add filename         添加指定文件暂存区
-- git add .                添加所有文件到暂存区 
+- git add .                添加所有文件到暂存区(不包括删除文件) 
+- git add -A               添加所有文件到暂存区(包括删除文件) 
 - git commit -m "提交注释"  提交到本地库
 
 ### 删除文件
@@ -50,4 +54,24 @@
     - git pull origin master   抓取+合并远程库到本地库
 
 - git clone 仓库地址
-    - git clone origin master  下载远程库到本地库
+    - git clone https://github.com/WTxiaomage/learning-repository.git  下载远程库到本地库
+
+- 设置本地dev分支与远程dev分支的追踪关系
+    - 在dev分支下执行   
+        git branch --set-upstream-to=origin/dev
+
+
+### 项目中开发
+   > 通常去一家公司，需要down项目到本地，而我们通常在dev分支开发
+1. 第一种方法(麻烦)：
+    - git clone 仓库地址   (克隆下来只有master分支)
+    - cd 本地文件夹名       (进入本地仓库)
+    - git branch dev       (创建dev分支)
+    - git checkout dev     (切换到dev分支)
+    - git pull 远程地址 dev (拉取远程dev分支)
+    > 这种方法较麻烦，本地有两个分支
+2. 第二种方法(推荐)
+    - git clone -b dev  https://github.com/WTxiaomage/learning-repository.git
+    > 这种方法只会clone远程仓库的dev分支到本地，本地只存在我们经常用的分支
+        
+

@@ -1,4 +1,4 @@
-# learning-repertory - 学习仓库
+# learning-repository - 学习仓库
 ---
 - 这是一个学习仓库，里面记录自己的学习经验和想法。
 <br>
