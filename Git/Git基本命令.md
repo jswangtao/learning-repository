@@ -1,5 +1,5 @@
 # Git
-![git工作原理图]("./images/git_three_rigon.png"  )
+![git工作原理图]("https://github.com/WTxiaomage/learning-repository/blob/master/Git/images/git_three_rigon.png"  )
 
 # Git 基本命令
 
