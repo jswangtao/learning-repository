@@ -264,7 +264,7 @@
 	- Unmount：被移出真实 DOM
 2. 生命周期流程:
 
-    ![组件生命周期](http://i.imgur.com/h5khD9F.png)
+    ![组件生命周期](https://github.com/WTxiaomage/learning-repository/blob/master/React/images/react-lifecycle-old.png)
 
 - 第一次初始化显示: 
 	```
@@ -294,9 +294,9 @@
 - componentWillReceiveProps()
 4. 新版生命周期
 
-	![组件生命周期](http://i.imgur.com/h5khD9F.png)
+	![组件生命周期](https://github.com/WTxiaomage/learning-repository/blob/master/React/images/react-lifecycle-16.4.png)
 
-	![组件生命周期](http://i.imgur.com/h5khD9F.png)
+	![组件生命周期](https://github.com/WTxiaomage/learning-repository/blob/master/React/images/react-lifecycle-all-16.4.png)
 - 常用的钩子函数
 	- render(): 初始化渲染或更新渲染调用
 	- componentDidMount(): 开启监听,添加订阅, 发送ajax请求
@@ -327,7 +327,7 @@
 Virtual DOM 本质上就是在 JS 和 DOM 之间做了一个缓存。
 可以类比 CPU 和硬盘，既然硬盘这么慢，我们就在它们之间加个缓存：既然 DOM 这么慢，我们就在它们 JS 和 DOM 之间加个缓存。CPU（JS）只操作内存（Virtual DOM），最后的时候再把变更写入硬盘（DOM）。
 
-![是是是](http://i.imgur.com/psaZdqN.png)
+![Virtual DOM 算法](https://github.com/WTxiaomage/learning-repository/blob/master/React/images/react-diff.png)
 
 > [返回目录](#list-two)
 ## <a id="two-eight">2.8 命令式编程与声明式编程</a>
