@@ -60,7 +60,8 @@ ReactNews
 
 
 #  2. app1: 实现一个评论管理功能
-[demo1-react-comment地址]()
+![demo1-react-comment](https://github.com/WTxiaomage/learning-repository/blob/master/React/images/demo_comment.gif)
+[demo1-react-comment地址](https://github.com/WTxiaomage/learning-repository/tree/master/React/demo/demo1-react-comment)
 ## 1). 拆分组件:
 1. 应用组件: app
 2. 添加评论组件: comment-add
