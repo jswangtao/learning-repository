@@ -143,7 +143,7 @@
 * vm/组件对象
 * 生命周期图
 
-	![生命周期图](https://github.com/WTxiaomage/learning-repository/blob/master/Git/images/git_three_rigon.png)
+	![生命周期图](https://github.com/WTxiaomage/learning-repository/blob/master/Vue/images/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE.jpg)
 * 主要的生命周期函数(钩子)
 	created() / mounted(): 启动异步任务(启动定时器,发送ajax请求, 绑定监听)
 	beforeDestroy(): 做一些收尾的工作
