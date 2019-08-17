@@ -231,5 +231,6 @@
 > [返回目录](#list-one)
 
 ## <a href="https://github.com/WTxiaomage/learning-repository/tree/master/Vue/demo/01_vue_base_demo">1.9 Vue 基础DEMO</a>
-以上只是对Vue基本知识的简单总结，建议根据基础DEMO详细了解，源码中有详细的注释
+以上只是对Vue基本知识的简单总结，建议根据基础DEMO详细了解，源码中有详细的注释,> [点击跳转](https://github.com/WTxiaomage/learning-repository/tree/master/Vue/demo/01_vue_base_demo)
+
 > [返回目录](#list-one)
