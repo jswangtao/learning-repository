@@ -26,14 +26,14 @@
    - 借鉴 angular 的模板和数据绑定技术
    - 借鉴 react 的组件化和虚拟 DOM 技术
 5. vue 包含一系列的扩展插件(库):
-   _ vue-cli: vue 脚手架
-   _ vue-resource(axios): ajax 请求
-   _ vue-router: 路由
-   _ vuex: 状态管理
-   _ vue-lazyload: 图片懒加载
-   _ vue-scroller: 页面滑动相关
-   _ mint-ui: 基于 vue 的组件库(移动端)
-   _ element-ui: 基于 vue 的组件库(PC 端)
+   - vue-cli: vue 脚手架
+   - vue-resource(axios): ajax 请求
+   - vue-router: 路由
+   - vuex: 状态管理
+   - vue-lazyload: 图片懒加载
+   - vue-scroller: 页面滑动相关
+   - mint-ui: 基于 vue 的组件库(移动端)
+   - element-ui: 基于 vue 的组件库(PC 端)
 > [返回目录](#list-one)
 
 ## <a id="one-two">1.2 Vue 基本使用</a>

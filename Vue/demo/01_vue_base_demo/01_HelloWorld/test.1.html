@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="components-demo">
+      <button-counter :count="count"></button-counter>
+      <button-counter :count="count"></button-counter>
+      <button-counter :count="count"></button-counter>
+    </div>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script>
+      // 定义一个名为 button-counter 的新组件
+      Vue.component("button-counter", {
+        // data() {
+        //   return {
+        //     count:0
+        //   }
+        // },
+        props: ["count"],
+        template:
+          '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+      });
+    
+     var vm= new Vue({
+        el: "#components-demo",
+
+        data: {
+          count: 0
+        }
+        // data() {
+        //   return {
+        //     count:0
+        //   }
+        // },
+      });
+      console.log(vm);
+    </script>
+  </body>
+</html>
