@@ -140,6 +140,8 @@
 ## <a id="one-five">1.5 Vue 生命周期</a>
 
 * vm/组件对象
+
+	![mvvm图](https://github.com/WTxiaomage/learning-repository/blob/master/Vue/images/mvvm%E5%9B%BE.jpg)
 * 生命周期图
 
 	![生命周期图](https://github.com/WTxiaomage/learning-repository/blob/master/Vue/images/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE.jpg)
