@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>01_HelloWorld</title>
-</head>
-<body>
-
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>01_HelloWorld</title>
+  </head>
+  <body>
+    <!--
   1. 引入Vue.js
   2. 创建Vue对象
     el : 指定根element(选择器)
@@ -16,24 +15,29 @@
   5. 理解vue的mvvm实现
 -->
 
-<!--模板-->
-<div id="test">
-  <input type="text" v-model="msg" ><br><!--指令-->
-  <p v-html='msg'></p>
-  <p v-html='msg'></p>
-  <p>hello {{msg}}</p><!--大括号表达式-->
-</div>
-<!--  -->
-<script type="text/javascript" src="../js/vue.js"></script>
-<script type="text/javascript">
-  const vm = new Vue({ // 配置对象 options
-    // 配置选项(option)
-    el: '#test',  // element: 指定用vue来管理页面中的哪个标签区域
-    data: {
-      msg: 'atguigu'
-    }
-  })
-console.log(vm);
-</script>
-</body>
+    <!--模板-->
+    <div id="test">
+      <!--v-model指令-->
+      <input type="text" v-model="msg" /><br />
+      <!--v-html指令-->
+      <div>v-html指令：<span v-html="msg"></span></div>
+      <!--v-text指令-->
+      <div>v-text指令：<span v-text="msg"></span></div>
+      <!--大括号表达式-->
+      <div>
+        大括号表达式：<span>{{ msg }}</span>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <script type="text/javascript">
+      const vm = new Vue({
+        // 配置对象 options
+        el: "#test", // element: 指定用vue来管理页面中的哪个标签区域
+        data: {
+          msg: "双向绑定与单向读取"
+        }
+      });
+      console.log(vm);
+    </script>
+  </body>
 </html>
