@@ -1,3 +1,5 @@
+# <a id="list-four">4. Vuex</a> 
+
 # 1. vuex是什么
 	github站点: https://github.com/vuejs/vuex
 	在线文档: https://vuex.vuejs.org/zh-cn/

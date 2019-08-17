@@ -1,3 +1,6 @@
+# <a id="list-three">3. Vue源码分析</a> 
+
+
 ## 1. 准备
 	1.[].slice.call(lis): 将伪数组转换为真数组
 	2.node.nodeType: 得到节点类型
