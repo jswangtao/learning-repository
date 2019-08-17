@@ -10,6 +10,7 @@
 | [1.6 Vue 自定义过滤器](#one-six) |
 | [1.7 Vue 内置指令](#one-seven) |
 | [1.8 Vue 自定义指令](#one-eight) |
+| [1.9 Vue 基础DEMO](https://github.com/WTxiaomage/learning-repository/tree/master/Vue/demo/01_vue_base_demo) |
 
 <br/>
 <br/>
@@ -227,4 +228,8 @@
 	```
 	<div v-my-directive='xxx'>
 	```
+> [返回目录](#list-one)
+
+## <a href="https://github.com/WTxiaomage/learning-repository/tree/master/Vue/demo/01_vue_base_demo">1.9 Vue 基础DEMO</a>
+以上只是对Vue基本知识的简单总结，建议根据基础DEMO详细了解，源码中有详细的注释
 > [返回目录](#list-one)
