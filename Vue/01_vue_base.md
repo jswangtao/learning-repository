@@ -34,7 +34,7 @@
    _ vue-scroller: 页面滑动相关
    _ mint-ui: 基于 vue 的组件库(移动端)
    _ element-ui: 基于 vue 的组件库(PC 端)
-   > [返回目录](#list-one)
+> [返回目录](#list-one)
 
 ## <a id="one-two">1.2 Vue 基本使用</a>
 
@@ -51,7 +51,7 @@
 
 - 指定 dom 标签容器的选择器
 - Vue 就会管理对应的标签及其子标签
-  > [返回目录](#list-one)
+> [返回目录](#list-one)
 
 ### <a id="one-three-two">1.3.2 data</a>
 
@@ -60,7 +60,7 @@
 - vm 也会自动拥有 data 中所有属性
   页面中可以直接访问使用
   数据代理: 由 vm 对象来代理对 data 中所有属性的操作(读/写)
-  > [返回目录](#list-one)
+> [返回目录](#list-one)
 
 ### <a id="one-three-three">1.3.3 methods</a>
 
@@ -68,7 +68,7 @@
 - 供页面中的事件指令来绑定回调
 - 回调函数默认有 event 参数, 但也可以指定自己的参数
 - 所有的方法由 vue 对象来调用, 访问 data 中的属性直接使用 this.xxx
-  > [返回目录](#list-one)
+> [返回目录](#list-one)
 
 ### <a id="one-three-four">1.3.4 computed</a>
 
@@ -93,25 +93,24 @@
       })
       ```
 
-  > [返回目录](#list-one)
+> [返回目录](#list-one)
 
 ### <a id="one-three-five">1.3.5 watch</a>
 
 - 包含多个属性监视的对象
 - 分为一般监视和深度监视
   ````
-  }
-  {
-  ,
-  )
-  }
-  `
+	xxx: function(value){}
+	xxx : {
+		deep : true,
+		handler : fun(value)
+	}
   ````
 - 另一种添加监视方式:
   ```
   vm.$watch('xxx', function(value){})
   ```
-  > [返回目录](#list-one)
+> [返回目录](#list-one)
 
 ## <a id="one-four">1.4 Vue 过渡动画</a>
 
