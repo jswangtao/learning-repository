@@ -59,7 +59,7 @@
   // 3. 更新fragment中所有li的文本
   Array.prototype.slice.call(fragment.childNodes).forEach(node => {
     if (node.nodeType===1) { // 元素节点 <ul>
-      Array.from(node.children).forEach(li => li.textContent = 'atguigu')
+      Array.from(node.children).forEach(li => li.textContent = 'vue')
     }
   })
 
