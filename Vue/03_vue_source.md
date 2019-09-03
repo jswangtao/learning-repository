@@ -84,10 +84,12 @@
 			* 在初始化define data中各个属性时创建对应的dep对象
 			* 在data中的某个属性值被设置为新的对象时
 		* 对象的结构
+			```
 			{
 				id, // 每个dep都有一个唯一的id
 				subs //包含n个对应watcher的数组(subscribes的简写)
 			}
+			```
 		* subs属性说明
 			* 当一个watcher被创建时, 内部会将当前watcher对象添加到对应的dep对象的subs中
 			* 当此data属性的值发生改变时, 所有subs中的watcher都会收到更新的通知, 从而最终更新对应的界面
@@ -101,6 +103,7 @@
 		* 监视当前表达式数据的变化
 		* 创建的时机: 在初始化编译模板时
 		* 对象的组成
+			```
 			{
 				vm,  //vm对象
 				exp, //对应指令的表达式
@@ -109,7 +112,7 @@
 				depIds //表达式中各级属性所对应的dep对象的集合对象
 						//属性名为dep的id, 属性值为dep
 			}
-		
+			```
 	- 总结: dep与watcher的关系: 多对多
 		* 一个data中的属性对应对应一个dep, 一个dep中可能包含多个watcher(模板中有几个表达式使用到了属性)
 		* 模板中一个非事件表达式对应一个watcher, 一个watcher中可能包含多个dep(表达式中包含了几个data属性)
@@ -122,4 +125,10 @@
 	- 双向数据绑定的实现流程:
 		* 在解析v-model指令时, 给当前元素添加input监听
 		* 当input的value发生改变时, 将最新的值赋值给当前表达式所对应的data属性
+> [返回目录](#list-three)
+
+5. 原理图
+
+	![mvvm图](https://github.com/WTxiaomage/learning-repository/blob/master/Vue/images/vue_source.png)
+	
 > [返回目录](#list-three)
