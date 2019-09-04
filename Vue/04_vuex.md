@@ -21,7 +21,7 @@
 - view: 以声明方式将state映射到视图
 - actions: 响应在view上的用户输入导致的状态变化(包含n个更新状态的方法)
 
-	![单向数据流](https://vuex.vuejs.org/zh-cn/images/flow.png)
+	![单向数据流](https://github.com/WTxiaomage/learning-repository/blob/master/Vue/images/flow.png)
 
 > [返回目录](#list-four)
 
@@ -34,6 +34,8 @@
 - vuex就是用来解决这个问题的
 
 	![vuex结构](https://github.com/WTxiaomage/learning-repository/blob/master/Vue/images/Vuex%E7%BB%93%E6%9E%84%E5%9B%BE.png)
+
+> [返回目录](#list-four)
 
 ## <a id="four-four">4.4 vuex的核心概念</a>
 1. state
