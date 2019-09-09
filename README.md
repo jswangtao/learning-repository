@@ -17,4 +17,17 @@
 | [React](https://github.com/WTxiaomage/learning-repository/tree/master/React) | React相关知识 |
 | [Vue](https://github.com/WTxiaomage/learning-repository/tree/master/Vue) | Vue相关知识 |
 
- 
+## 三、学习环境
+
+- 推荐一个网站，慕课网
+
+    ![work_space](https://github.com/WTxiaomage/learning-repository/blob/master/Git/images/git_three_rigon.png)
+
+## 四、赞助
+
+- 如果觉得对您有帮助，欢迎star和clone
+- 读后有收获可以请作者喝咖啡
+
+    ![Alipay](https://github.com/WTxiaomage/learning-repository/blob/master/Git/images/git_three_rigon.png)
+    ![WeChat](https://github.com/WTxiaomage/learning-repository/blob/master/Git/images/git_three_rigon.png)
+

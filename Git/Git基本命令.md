@@ -43,6 +43,11 @@
 - git merge test         合并分支
 - git branch -d test     删除分支
 
+### Bug分支管理
+- git stash  储藏工作现场
+- git stash list 查看储藏列表
+- git stash pop 恢复储藏
+
 ### 与GitHub交互
 - git push 仓库地址别名 分支名  
     - git push origin master   推送本地库到远程库
@@ -74,4 +79,6 @@
     - git clone -b dev  https://github.com/WTxiaomage/learning-repository.git
     > 这种方法只会clone远程仓库的dev分支到本地，本地只存在我们经常用的分支
         
+### 总结
 
+- 这只是个人在项目开发过程中经常用到的命令集合，方便快速记忆和查阅，如果想系统学习git，推荐[《廖雪峰的Git教程》](https://www.liaoxuefeng.com/wiki/896043488029600)
