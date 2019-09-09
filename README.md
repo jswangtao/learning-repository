@@ -19,7 +19,7 @@
 
 ## 三、学习环境
 
-- 推荐一个网站，慕课网
+- 推荐一个网站，[慕课网](https://www.imooc.com/)
 
     ![work_space](https://github.com/WTxiaomage/learning-repository/blob/master/images/work_space.jpg)
 
