@@ -28,6 +28,6 @@
 - 如果觉得对您有帮助，欢迎star和clone
 - 读后有收获可以请作者喝咖啡
 
-    ![Alipay](https://github.com/WTxiaomage/learning-repository/blob/master/images/Alipay.jpg)
+    ![Alipay](https://github.com/WTxiaomage/learning-repository/blob/master/images/Alipay.png)
 
 
