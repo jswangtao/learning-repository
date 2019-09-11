@@ -21,13 +21,13 @@
 
 - 推荐一个网站，[慕课网](https://www.imooc.com/)
 
-    ![work_space](https://github.com/WTxiaomage/learning-repository/blob/master/images/work_space.jpg)
+    ![work_space](./images/work_space.jpg)
 
 ## 四、赞助
 
 - 如果觉得对您有帮助，欢迎star和clone
 - 读后有收获可以请作者喝咖啡
 
-    ![Alipay](https://github.com/WTxiaomage/learning-repository/blob/master/images/Alipay.png)
+    ![Alipay](./images/Alipay.png)
 
 

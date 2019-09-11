@@ -1,0 +1,61 @@
+{
+  "title": "wimi 的文档库",
+  "author": "汪滔 - wangtao",
+  "description": "wangtao 的文档库. 里面包含了个人撰写的所有前端文章，例如 Vue、React,、ECharts、微信小程序等……",
+  "language": "zh-hans",
+  "plugins": [
+    "theme-comscore",
+    "prism",
+    "-highlight",
+    "copy-code-button",
+    "search-pro",
+    "-search",
+    "-lunr",
+    "expandable-chapters",
+    "splitter",
+    "-sharing",
+    "github-buttons",
+    "donate",
+    "tbfed-pagefooter",
+    "anchor-navigation-ex"
+  ],
+  "pluginsConfig": {
+    "prism": {
+      "css": ["prismjs/themes/prism-solarizedlight.css"],
+      "lang": {
+        "shell": "bash"
+      }
+    },
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "WTxiaomage",
+          "repo": "learning-repository",
+          "type": "star",
+          "count": true,
+          "size": "small"
+        },
+        {
+          "user": "WTxiaomage",
+          "width": "160", 
+          "type": "follow", 
+          "count": true,
+          "size": "small"
+        }
+      ]
+    },
+    "donate": {
+      "button": "打赏",
+      "alipayText": "支付宝打赏",
+      "alipay": "https://github.com/WTxiaomage/learning-repository/blob/master/images/Alipay.png?raw=true"
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy WTxiaomage 2019",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    }
+  }
+}
