@@ -4,7 +4,7 @@
   "description": "wangtao 的文档库. 里面包含了个人撰写的所有前端文章，例如 Vue、React,、ECharts、微信小程序等……",
   "language": "zh-hans",
   "styles": {
-    "website": "./common/css/style.css"
+    "website": "./public/css/style.css"
   },
   "plugins": [
     "theme-comscore",
@@ -50,7 +50,7 @@
     "donate": {
       "button": "打赏",
       "alipayText": "支付宝打赏",
-      "alipay": "https://github.com/WTxiaomage/learning-repository/blob/master/common/images/Alipay.png?raw=true"
+      "alipay": "https://github.com/WTxiaomage/learning-repository/blob/master/public/images/Alipay.png?raw=true"
     },
     "tbfed-pagefooter": {
       "copyright": "Copyright &copy WTxiaomage 2019",

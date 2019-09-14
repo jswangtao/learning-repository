@@ -14,21 +14,21 @@
 
 | 目录                                                   | 详情                                       |
 | ------------------------------------------------------ | ------------------------------------------ |
-| [Git](./Git/README.md) | Git基本命令 |
-| [React](./React/README.md) | React相关知识 |
-| [Vue](./Vue/README.md) | Vue相关知识 |
+| [Git](./src/Git/README.md) | Git基本命令 |
+| [React](./src/React/README.md) | React相关知识 |
+| [Vue](./src/Vue/README.md) | Vue相关知识 |
 
 ### 三、学习环境
 
 - 推荐一个网站，[慕课网](https://www.imooc.com/)
 
-    ![work_space](./common/images/work_space.jpg)
+    ![work_space](./public/images/work_space.jpg)
 
 ### 四、赞助不断
 
 - 如果觉得对您有帮助，欢迎star和clone
 - 读后有收获可以请作者喝咖啡
 
-    ![Alipay](./common/images/Alipay.png)
+    ![Alipay](./public/images/Alipay.png)
 
 
