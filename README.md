@@ -13,9 +13,9 @@
 
 | 目录                                                   | 详情                                       |
 | ------------------------------------------------------ | ------------------------------------------ |
-| [Git](https://github.com/WTxiaomage/learning-repository/blob/master/Git/Git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4.md) | Git基本命令 |
-| [React](https://github.com/WTxiaomage/learning-repository/tree/master/React) | React相关知识 |
-| [Vue](https://github.com/WTxiaomage/learning-repository/tree/master/Vue) | Vue相关知识 |
+| [Git](./Git/README.md) | Git基本命令 |
+| [React](./React/README.md) | React相关知识 |
+| [Vue](./Vue/README.md) | Vue相关知识 |
 
 ## 三、学习环境
 
