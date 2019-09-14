@@ -22,13 +22,13 @@
 
 - 推荐一个网站，[慕课网](https://www.imooc.com/)
 
-    ![work_space](./images/work_space.jpg)
+    ![work_space](./common/images/work_space.jpg)
 
 ### 四、赞助不断
 
 - 如果觉得对您有帮助，欢迎star和clone
 - 读后有收获可以请作者喝咖啡
 
-    ![Alipay](./images/Alipay.png)
+    ![Alipay](./common/images/Alipay.png)
 
 
