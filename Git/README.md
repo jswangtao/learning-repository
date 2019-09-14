@@ -1,10 +1,8 @@
-# Git
+# Git 基本命令
 
 ![git工作原理图](./images/git_three_rigon.png)
 
-# Git 基本命令
-
-## 创建库
+### 创建库
 
 - git init 初始化仓库
 - git config user.name wangtao 设置用户名
@@ -18,7 +16,7 @@
 
 > 以上几步做完会有.git 文件夹，并且内部有 config 文件，里面有所有相关的信息
 
-## 运用库
+### 运用库
 
 1. 添加文件
 
@@ -71,7 +69,7 @@
      - 在 dev 分支下执行  
         git branch --set-upstream-to=origin/dev
 
-## 项目中开发
+### 项目中开发
 
 > 通常去一家公司，需要 down 项目到本地，而我们通常将 dev 分支作为开发分支，clone 到本地后，需创建自己的分支开发
 
@@ -86,6 +84,6 @@
    - git clone -b dev https://github.com/WTxiaomage/learning-repository.git
      > 这种方法只会 clone 远程仓库的 dev 分支到本地，本地只存在我们经常用的分支
 
-## 总结
+### 总结
 
 - 这只是个人在项目开发过程中经常用到的命令集合，方便快速记忆和查阅，如果想系统学习 git，推荐[《廖雪峰的 Git 教程》](https://www.liaoxuefeng.com/wiki/896043488029600)
