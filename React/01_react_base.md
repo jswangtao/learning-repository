@@ -6,6 +6,7 @@
 | [1.2 React 基本使用](#one-two)                    |
 | [1.3 JSX 的理解和使用](#one-three)                |
 | [1.4 模块与模块化, 组件与组件化的理解](#one-four) |
+| [1.5 基础DEMO](./demo/01_react_base_demo) |
 
 <br/>
 <br/>
@@ -64,7 +65,7 @@
     })
     ```
 
-    > 在 JSX 中 map 函数用的非常多，经常用它来将数组转化为 vDOM（虚拟 DOM）数组,对数组的遍历每一项要加 key
+    > 在 JSX 中 map 函数用的非常多，经常用它来将数组转化为 ReactDOM 数组,对数组的遍历每一项要加 key
 
 3.  注意:
 
