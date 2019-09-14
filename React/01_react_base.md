@@ -1,4 +1,4 @@
-# <a id="list-one">1. React 入门</a>
+# <a id="list-one">1. React 基础</a>
 
 | 目录                                               |
 | -------------------------------------------------- |
@@ -21,18 +21,15 @@
    - 高效
    - 单向数据流
 4. React 高效的原因
-   虚拟(virtual)DOM, 不总是直接操作 DOM(批量更新, 减少更新的次数)
-   高效的 DOM Diff 算法, 最小化页面重绘(减小页面更新的区域)
-   
+   - 虚拟 DOM(virtual), 不总是直接操作 DOM(批量更新, 减少更新的次数)
+   - 高效的 DOM Diff 算法, 最小化页面重绘(减小页面更新的区域)
 
 ## <a id="one-two">1.2. React 的基本使用</a>
 
 1.  导入相关 js 库文件(react.js, react-dom.js, babel.min.js)
-
     - react.js: React 的核心库
-    - react-dom.js: 提供操作 DOM 的 react 扩展库
+    - react-dom.js: 提供操作 DOM 的 React 扩展库
     - babel.min.js: 解析 JSX 语法代码转为纯 JS 语法代码的库
-
 2.  在 HTML 文件中编码:
 
     ```
@@ -48,8 +45,6 @@
     </script>
 
     ```
-
-
 
 ## <a id="one-three">1.3. JSX 的理解和使用</a>
 
@@ -76,18 +71,16 @@
     - 标签必须有结束
     - 标签的 class 属性必须改为 className 属性
     - 标签的 style 属性值必须为:双大括号
-	- className 要展现多个类名,前者是定死的类名，后者写活的，可以用于写动画效果
+    - className 要展现多个类名,前者是定死的类名，后者写活的，可以用于写动画效果
 
-		```
-		<h1 className="w1 w3">
-		{formatName(user)}
-		</h1>
-		<h1 className={["w1", "w3"].join(" ")}>
-			{formatName(user)}
-		</h1>
-		```
-
-
+          	```
+          	<h1 className="w1 w3">
+          	{formatName(user)}
+          	</h1>
+          	<h1 className={["w1", "w3"].join(" ")}>
+          		{formatName(user)}
+          	</h1>
+          	```
 
 ## <a id="one-four">1.4. 几个重要概念理解</a>
 
@@ -108,5 +101,3 @@
    当应用的 js 都以模块来编写的, 这个应用就是一个模块化的应用
 2. 组件化:
    当应用是以多组件的方式实现功能, 这上应用就是一个组件化的应用
-
-
