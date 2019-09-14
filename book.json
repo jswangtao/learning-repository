@@ -3,6 +3,9 @@
   "author": "汪滔 - wangtao",
   "description": "wangtao 的文档库. 里面包含了个人撰写的所有前端文章，例如 Vue、React,、ECharts、微信小程序等……",
   "language": "zh-hans",
+  "styles": {
+    "website": "./common/css/style.css"
+  },
   "plugins": [
     "theme-comscore",
     "prism",
