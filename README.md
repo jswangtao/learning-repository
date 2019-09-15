@@ -26,7 +26,8 @@
 
 ### 四、赞助不断
 
-- 如果觉得对您有帮助，欢迎star和clone
+- 你的鼓励将是我的动力！
+- 如果觉得对您有帮助，欢迎[star和clone](https://github.com/WTxiaomage/learning-repository)
 - 读后有收获可以请作者喝咖啡
 
     ![Alipay](./public/images/Alipay.png)

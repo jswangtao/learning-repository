@@ -27,8 +27,8 @@
       this.state = {
         isLikeMe: true
       }
-      // 绑定this为组件对象
-      // this.change = this.change.bind(this)
+      // 绑定this为组件对象（实例对象）
+      this.change = this.change.bind(this)
     }
     change () {
       // 更新状态: this.setState()

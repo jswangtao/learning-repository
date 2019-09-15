@@ -10,4 +10,5 @@
 - [JavaScript ✘]()
 - [ES6 ✘]()
 - [TypeScript ✘]()
+- [webpack ✘]()
 - [GitBook ✘]()
