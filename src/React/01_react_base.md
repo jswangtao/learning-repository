@@ -6,7 +6,7 @@
 | [1.2 React 基本使用](#one-two)                    |
 | [1.3 JSX 的理解和使用](#one-three)                |
 | [1.4 模块与模块化, 组件与组件化的理解](#one-four) |
-| [1.5 基础DEMO](https://github.com/WTxiaomage/learning-repository/tree/master/React/demo/01_react_base_demo) |
+| [1.5 基础DEMO](https://github.com/WTxiaomage/learning-repository/tree/master/src/React/demo/01_react_base_demo) |
 
 <br/>
 <br/>
