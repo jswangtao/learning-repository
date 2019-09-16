@@ -180,42 +180,38 @@
 
    ![组件生命周期](./images/react-lifecycle-old.png)
 
-   - 第一次初始化显示:`ReactDOM.render(<Xxx/>, containerDom)`
+   - 挂载阶段:`ReactDOM.render(<Xxx/>, containerDom)`
 
      - constructor()
      - componentWillMount() : 将要插入回调
      - render() : 用于插入虚拟 DOM 回调
      - componentDidMount() : 已经插入回调
 
-   - 每次更新 state:`this.setState({})`
+   - 更新阶段:`this.setState({})`
 
-     - componentWillReceiveProps(): 接收父组件新的属性
-     - componentWillUpdate() : 将要更新回调
+     - componentWillReceiveProps(nextProps): 接收父组件新的属性
+     - shouldComponentUpdate(nextProps, nextState) 是否组件更新（通常在此处子组件是否需要重新渲染）
+     - componentWillUpdate(nextProps, nextState) : 将要更新回调
      - render() : 更新(重新渲染)
-     - componentDidUpdate() : 已经更新回调
+     - componentDidUpdate(prevProps, prevState, snapshot) : 已经更新回调
 
-   - 删除组件:`ReactDOM.unmountComponentAtNode(div)`
+   - 卸载阶段:`ReactDOM.unmountComponentAtNode(div)`
+
      - componentWillUnmount() : 组件将要被移除回调
 
-3. 老版钩子函数
+   > [父子组件生命周期例子](./demo/01_react_base_demo/09_component_lifecycle/父子组件生命周期.html)
 
-   - 常用的钩子函数
-     - render(): 初始化渲染或更新渲染调用
-     - componentDidMount(): 开启监听,添加订阅, 发送 ajax 请求
-     - componentWillUnmount(): 做一些收尾工作, 如: 清除 timer，取消网络请求或清除在 componentDidMount() 中创建的订阅
-     - componentDidUpdate():当组件更新后，可以在此处对 DOM 进行操作。如果你对更新前后的 props 进行了比较，也可以选择在此处进行网络请求
-   - 不常用的钩子函数
-     - shouldComponentUpdate(): 根据 shouldComponentUpdate() 的返回值，判断 React 组件的输出是否受当前 state 或 props 更改的影响
-   - 将废弃钩子函数
-     - componentWillMount()
-     - componentWillReceiveProps()
-     - componentWillUpdate()
+3. 16.4 新版生命周期
 
-4. 16.3 新版生命周期
-
-   ![组件生命周期](./images/react-lifecycle-16.4.png)
+   <!-- ![组件生命周期](./images/react-lifecycle-16.4.png) -->
 
    ![组件生命周期](./images/react-lifecycle-all-16.4.png)
+
+   - 在 16.4 版本里面有 3 个 will 相关的生命周期被`static getDerivedStateFromProps(props, state)`代替，减少生命周期的滥用
+
+   > [父子组件生命周期例子](./demo/01_react_base_demo/09_component_lifecycle/父子组件生命周期.html)
+
+   - `getSnapshotBeforeUpdate(prevProps, prevState)`不常用
 
    > [官方组件生命周期函数](https://react.docschina.org/docs/react-component.html)
 
