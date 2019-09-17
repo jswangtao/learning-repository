@@ -6,6 +6,7 @@
   - [React 基础](./src/React/01_react_base.md)
   - [React 深入](./src/React/02_react_component_programming.md)
   - [React 脚手架创建项目](./src/React/03_react_practice.md)
+  - [Redux](./src/React/04_redux.md)
 - [Vue ✘]()
 - [JavaScript ✘]()
 - [ES6 ✘]()

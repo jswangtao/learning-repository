@@ -1,4 +1,4 @@
-# <a id="three-one">3 使用 create-react-app 创建 react 应用</a>
+# <a id="list-three">3 使用 create-react-app 创建 react 应用</a>
 
 | 目录                                          |
 | --------------------------------------------- |
@@ -64,7 +64,7 @@ npm start
 ### <a id="three-six" class='part-part'>3.6 app1: 实现一个评论管理功能</a>
 
 ![demo1-react-comment](./images/demo_comment.gif)
-[demo1-react-comment 地址](https://github.com/WTxiaomage/learning-repository/tree/master/React/demo/demo1-react-comment)
+[demo1-react-comment 地址](https://github.com/WTxiaomage/learning-repository/tree/master/src/React/demo/demo1-react-comment)
 
 1. 拆分组件:
 
@@ -119,8 +119,9 @@ npm start
        PubSub.publish('delete', data) //发布消息
    优点: 可以支持任意关系组件之间的通信
    ```
+3. 方式三: [Redux](./04_redux.md)
 
-3. 事件监听理解
+4. 事件监听理解
 
    - DOM 事件
      - 绑定事件监听 - 事件名(类型): 只有有限的几个, 不能随便写 - 回调函数
