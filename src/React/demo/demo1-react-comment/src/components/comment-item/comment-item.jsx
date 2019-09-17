@@ -20,7 +20,7 @@ class CommentItem extends React.Component {
     return (
       <li className="list-group-item">
         <div className="handle">
-          <a href="javascript:;" onClick={this.deleteComment}>删除</a>
+          <a  onClick={this.deleteComment}>删除</a>
         </div>
         <p className="user"><span >{comment.username}</span><span>说:</span></p>
         <p className="centence">{comment.content}</p>
