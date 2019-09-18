@@ -5,7 +5,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default class Counter extends React.Component {
-
   static propTypes = {
     count: PropTypes.number.isRequired,
     increment: PropTypes.func.isRequired,
@@ -40,20 +39,15 @@ export default class Counter extends React.Component {
   render() {
     return (
       <div>
-        <p>
-          click {this.props.count} times {' '}
-        </p>
+        <p>click {this.props.count} times </p>
         <select ref="numSelect">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
-        </select>{' '}
+        </select>
         <button onClick={this.increment}>+</button>
-        {' '}
         <button onClick={this.decrement}>-</button>
-        {' '}
         <button onClick={this.incrementIfOdd}>increment if odd</button>
-        {' '}
         <button onClick={this.incrementAsync}>increment async</button>
       </div>
     )

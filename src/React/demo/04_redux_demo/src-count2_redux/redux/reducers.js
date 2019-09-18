@@ -1,10 +1,9 @@
-import {combineReducers} from 'redux'
-import {
-  INCREMENT,
-  DECREMENT
-} from './action-types'
+/*
+根据老的state和指定action, 处理返回一个新的state
+ */
+import {INCREMENT, DECREMENT} from './action-types'
 
-function counter(state = 0, action) {
+export function counter(state = 0, action) {
   console.log('counter', state, action)
   switch (action.type) {
     case INCREMENT:
@@ -15,7 +14,3 @@ function counter(state = 0, action) {
       return state
   }
 }
-
-export default combineReducers({
-  counter
-})
