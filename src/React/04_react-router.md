@@ -12,94 +12,95 @@
 
 ### <a id="four-one" class='part-part'>4.1 react-router 理解</a>
 
-- react 的一个插件库
+- React 的一个插件库
 - 专门用来实现一个 SPA 应用
-- 基于 react 的项目基本都会用到此库
+- 基于 React 的项目基本都会用到此库
 
 ### <a id="four-two" class='part-part'>4.2 几个重要问题</a>
 
 1. SPA 应用
 
-   单页 Web 应用（single page web application，SPA）
-   整个应用只有一个完整的页面
-   点击页面中的链接不会刷新页面, 本身也不会向服务器发请求
-   当点击链接时, 只会做页面的局部更新
-   数据都需要通过 ajax 请求获取, 并在前端异步展现
+   - 单页 Web 应用（single page web application，SPA）
+   - 整个应用只有一个完整的页面
+   - 点击页面中的链接不会刷新页面, 本身也不会向服务器发请求
+   - 当点击链接时, 只会做页面的局部更新
+   - 数据都需要通过 ajax 请求获取, 并在前端异步展现
 
 2. 路由
 
    - 什么是路由?
-     一个路由就是一个映射关系(key:value)
-     key 为路由路径, value 可能是 function/component
+     - 一个路由就是一个映射关系(key:value)
+     - key 为路由路径, value 可能是 function/component
    - 路由分类
-     后台路由: node 服务器端路由, value 是 function, 用来处理客户端提交的请求并返回一个响应数据
-     前台路由: 浏览器端路由, value 是 component, 当请求的是路由 path 时, 浏览器端前没有发送 http 请求, 但界面会更新显示对应的组件
+     - 后台路由: node 服务器端路由, value 是 function, 用来处理客户端提交的请求并返回一个响应数据
+     - 前台路由: 浏览器端路由, value 是 component, 当请求的是路由 path 时, 浏览器端前没有发送 http 请求, 但界面会更新显示对应的组件
    - 后台路由
-     - 注册路由: router.get(path, function(req, res))
+     - 注册路由: `router.get(path, function(req, res))`
      - 当 node 接收到一个请求时, 根据请求路径找到匹配的路由, 调用路由中的函数来处理请求, 返回响应数据
    - 前端路由
-     - 注册路由: <Route path="/about" component={About}>
-     - 当浏览器的 hash 变为#about 时, 当前路由组件就会变为 About 组件
+     - 注册路由: `<Route path="/about" component={About}>`
+     - 当浏览器的 hash 变为`#about` 时, 当前路由组件就会变为 About 组件
 
 3. 关于 url 中的
 
    - 理解#
-     '#'代表网页中的一个位置。其右面的字符，就是该位置的标识符
-     改变#不触发网页重载
-     改变#会改变浏览器的访问历史
+     - '#'代表网页中的一个位置。其右面的字符，就是该位置的标识符
+     - 改变#不触发网页重载
+     - 改变#会改变浏览器的访问历史
    - 操作#
-     window.location.hash 读取#值
-     window.onhashchange = func 监听 hash 改变
+     - window.location.hash 读取#值
+     - window.onhashchange = func 监听 hash 改变
    - 学习资源:
-     阮一峰教程: http://www.ruanyifeng.com/blog/2011/03/url_hash.html
+     - [阮一峰教程 url_hash](http://www.ruanyifeng.com/blog/2011/03/url_hash.html)
 
 ### <a id="four-three" class='part-part'>4.3 react-router 的学习资源</a>
 
 - github 主页: https://github.com/ReactTraining/react-router
 - 官网教程: https://github.com/reactjs/react-router-tutorial
-- 阮一峰教程: http://www.ruanyifeng.com/blog/2016/05/react_router.html
 
 ### <a id="four-four" class='part-part'>4.4 相关 API</a>
 
 1. react-router 中的相关组件:
 
-- Router: 路由器组件, 用来包含各个路由组件
-- Route: 路由组件, 注册路由
-- IndexRoute: 默认子路由组件
-- hashHistory: 路由的切换由 URL 的 hash 变化决定，即 URL 的#部分发生变化
-- Link: 路由链接组件
+   - router: 路由器组件, 用来包含各个路由组件
+   - route: 路由组件, 注册路由
+   - IndexRoute: 默认子路由组件
+   - hashHistory: 路由的切换由 URL 的 hash 变化决定，即 URL 的#部分发生变化
+   - Link: 路由链接组件
 
-2. Router: 路由器组件
+2. router: 路由器组件
 
-- 属性: history={hashHistory} 用来监听浏览器地址栏的变化, 并将 URL 解析成一个地址对象，供 React Router 匹配
-- 子组件: Route
+   - 属性: history={hashHistory} 用来监听浏览器地址栏的变化, 并将 URL 解析成一个地址对象，供 React Router 匹配
+   - 子组件: route
 
-3. Route: 路由组件
+3. route: 路由组件
 
-- 属性 1: path="/xxx"
-- 属性 2: component={Xxx}
-- 根路由组件: path="/"的组件, 一般为 App
-- 子路由组件: 子<Route>配置的组件
+   - 属性 1:`path="/xxx"`
+   - 属性 2: `component={Xxx}`
+   - 根路由组件: `path="/"`的组件, 一般为 App
+   - 子路由组件: 子`<Route>`配置的组件
 
 4. IndexRoute: 默认路由
 
-- 当父路由被请求时, 默认就会请求此路由组件
+   - 当父路由被请求时, 默认就会请求此路由组件
 
 5. hashHistory
 
-- 用于 Router 组件的 history 属性
-- 作用: 为地址 url 生成?\_k=hash, 用于内部保存对应的 state
+   - 用于 router 组件的 history 属性
+   - 作用: 为地址 url 生成`?\_k=hash`, 用于内部保存对应的 state
 
 6. Link: 路由链接
 
-- 属性 1: to="/xxx"
-- 属性 2: activeClassName="active"
+   - 属性 1: `to="/xxx"`
+   - 属性 2: `activeClassName="active"`
 
 ### <a id="four-five" class='part-part'>4.5 react-router 的基本使用</a>
 
 1. 下载
 
-   npm install react-router --save
+```
+npm install react-router --save
+```
 
 2. 定义各个路由组件
 
@@ -107,13 +108,13 @@
 1. About.js
     import React from 'react'
     function About() {
-    return <div>About组件内容</div>
+        return <div>About组件内容</div>
     }
     export default About
 2. Home.js
     import React from 'react'
     function Home() {
-    return <div>Home组件内容2</div>
+        return <div>Home组件内容2</div>
     }
     export default Home
 3. Repos.js
@@ -121,7 +122,7 @@
     export default class Repos extends Component {
     render() {
         return (
-        <div>Repos组件</div>
+            <div>Repos组件</div>
         )
     }
     }
@@ -133,12 +134,12 @@ export default class App extends Component {
     render() {
     return (
         <div>
-        <h2>Hello, React Router!</h2>
-        <ul>
-            <li><Link to="/about" activeClassName="active">About2</Link></li>
-            <li><Link to="/repos" activeClassName="active">Repos2</Link></li>
-        </ul>
-        {this.props.children}
+            <h2>Hello, React Router!</h2>
+            <ul>
+                <li><Link to="/about" activeClassName="active">About2</Link></li>
+                <li><Link to="/repos" activeClassName="active">Repos2</Link></li>
+            </ul>
+            {this.props.children}
         </div>
     )
     }
@@ -171,14 +172,15 @@ render((
 
 1. repo.js: repos 组件下的分路由组件
 
-   import React from 'react'
-   export default function ({params}) {
-   let {username, repoName} = params
-   return (
-
-   <div>用户名:{username}, 仓库名:{repoName}</div>
-   )
-   }
+```
+import React from 'react'
+export default function ({params}) {
+let {username, repoName} = params
+    return (
+        <div>用户名:{username}, 仓库名:{repoName}</div>
+    )
+}
+```
 
 2. repos.js
 
@@ -268,3 +270,8 @@ export default function NavLink(props) {
 ```
 <NavLink to={to}>{repo.repoName}</NavLink>
 ```
+
+### 总结
+
+- 参考文档：[React-Router 中文文档](http://react-guide.github.io/react-router-cn/docs/Introduction.html)
+- 参考文档：[react-admin完整项目](https://github.com/marmelab/react-admin)
