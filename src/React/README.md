@@ -5,5 +5,6 @@
 |[React基本认识](./01_react_base.md) |
 |[React组件化编程](./02_react_component_programming.md) |
 |[React脚手架创建项目](./03_react_practice.md) |
-|[Redux](./04_redux.md) |
+|[React-Router](./04_react-router.md) |
+|[Redux](./05_redux.md) |
 
