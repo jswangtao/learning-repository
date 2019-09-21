@@ -8,6 +8,7 @@
   - [React 脚手架创建项目](./src/React/03_react_practice.md)
   - [React-Router](./src/React/04_react-router.md)
   - [Redux](./src/React/05_redux.md)
+  - [React 源码](./src/React/05_redux.md)
 - [Vue ✘]()
 - [JavaScript ✘]()
 - [ES6 ✘]()
