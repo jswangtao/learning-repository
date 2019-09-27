@@ -3,7 +3,8 @@
 ### 创建书籍
 
 ```
-npm install gitbook -g    //安装GitBook
+npm install gitbook-cli -g    //安装GitBook
+gitbook install               // 下载依赖
 gitbook init              //初始化书籍目录
 gitbook serve            //编译书籍 可以用浏览器打开 http://127.0.0.1:4000 查看书籍的效果
 gitbook build            //打包书籍
