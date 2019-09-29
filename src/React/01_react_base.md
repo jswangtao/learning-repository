@@ -1,12 +1,12 @@
 # <a id="list-one">1. React 基础</a>
 
-| 目录                                              |
-| ------------------------------------------------- |
-| [1.1 React 基本认识](#one-one)                    |
-| [1.2 React 基本使用](#one-two)                    |
-| [1.3 JSX 的理解和使用](#one-three)                |
-| [1.4 模块与模块化, 组件与组件化的理解](#one-four) |
-| [1.5 基础DEMO](https://github.com/WTxiaomage/learning-repository/tree/master/src/React/demo/01_react_base_demo) |
+| 目录                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------- |
+| [1.1 React 基本认识](#one-one)                                                                                   |
+| [1.2 React 基本使用](#one-two)                                                                                   |
+| [1.3 JSX 的理解和使用](#one-three)                                                                               |
+| [1.4 模块与模块化, 组件与组件化的理解](#one-four)                                                                |
+| [1.5 基础 DEMO](https://github.com/WTxiaomage/learning-repository/tree/master/src/React/demo/01_react_base_demo) |
 
 <br/>
 <br/>
@@ -74,14 +74,14 @@
     - 标签的 style 属性值必须为:双大括号
     - className 要展现多个类名,前者是定死的类名，后者写活的，可以用于写动画效果
 
-          	```
-          	<h1 className="w1 w3">
-          	{formatName(user)}
-          	</h1>
-          	<h1 className={["w1", "w3"].join(" ")}>
-          		{formatName(user)}
-          	</h1>
-          	```
+    ```
+    <h1 className="w1 w3">
+    {formatName(user)}
+    </h1>
+    <h1 className={["w1", "w3"].join(" ")}>
+        {formatName(user)}
+    </h1>
+    ```
 
 ### <a id="one-four" class='part-part'>1.4 几个重要概念理解</a>
 
