@@ -1,14 +1,15 @@
 # <a id="list-two">2. Vue 组件化编程</a>
 
-| 目录                         |
-| ---------------------------- |
-| [2.1 Vue 脚手架](#two-one)   |
-| [2.2 ESlint](#two-two)       |
-| [2.3 组件化编程](#two-three) |
-| [2.4 ajax](#two-four)        |
-| [2.5 vue-router](#two-five)  |
+| 目录                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------- |
+| [2.1 Vue 脚手架](#two-one)                                                                                                      |
+| [2.2 ESlint](#two-two)                                                                                                          |
+| [2.3 组件化编程](#two-three)                                                                                                    |
+| [2.4 ajax](#two-four)                                                                                                           |
+| [2.5 vue-router](#two-five)                                                                                                     |
+| [2.6 组件化 DEMO](https://github.com/WTxiaomage/learning-repository/tree/master/src/Vue/demo/02_vue_component_programming_demo) |
 
-## <a id="two-one">2.1 Vue 脚手架</a>
+## <a id="two-one" class='part-part'>2.1 Vue 脚手架</a>
 
 - 用来创建 vue 项目的工具包
 - 创建项目:
@@ -23,58 +24,58 @@
   npm run dev
   ```
 - 生产环境打包发布
+
   ```
   npm run build
   npm install -g serve
   serve dist
   http://localhost:5000
   ```
-  > [返回目录](#list-two)
 
-## <a id="two-two">2.2 ESlint</a>
+## <a id="two-two" class='part-part'>2.2 ESlint</a>
 
 - 用来做项目编码规范检查的工具
 - 基本原理: 定义了很多规则, 检查项目的代码一旦发现违背了某个规则就输出相应的提示信息
   有相应的配置, 可定制检查
-  > [返回目录](#list-two)
 
-## <a id="two-three">2.3 组件化编程</a>
+## <a id="two-three" class='part-part'>2.3 组件化编程</a>
 
 1. vue 文件包含 3 个部分
 
-    ```
-    <template>
-      <div></div>
-    </template>
-    <script>
-      export default {
-        props: []/{}
-        data(){},
-        computed: {}
-        methods: {},
-        watch: {}
-        filters: {}
-        directives: {}
-        components: {}
-      }
-    </script>
-    <style>
-    </style>
-    ```
+   ```
+   <template>
+     <div></div>
+   </template>
+   <script>
+     export default {
+       props: []/{}
+       data(){},
+       computed: {}
+       methods: {},
+       watch: {}
+       filters: {}
+       directives: {}
+       components: {}
+     }
+   </script>
+   <style>
+   </style>
+   ```
 
 2. 组件化编码的基本流程
-    - 拆分界面, 抽取组件
-    - 编写静态组件
-    - 编写动态组件
-      - 初始化数据, 动态显示初始化界面
-      - 实现与用户交互功能
+
+   - 拆分界面, 抽取组件
+   - 编写静态组件
+   - 编写动态组件
+     - 初始化数据, 动态显示初始化界面
+     - 实现与用户交互功能
 
 3. 组件通信的 5 种方式
-    - props
-    - vue 的自定义事件
-    - pubsub 第三方库
-    - slot
-    - vuex(后面单独讲)
+   - props
+   - vue 的自定义事件
+   - pubsub 第三方库
+   - slot
+   - vuex(后面单独讲)
 4. props:
    - 父子组件间通信的基本方式
    - 属性值的 2 大类型:
@@ -95,9 +96,8 @@
    - 多组件共享状态(数据的管理)
    - 组件间的关系也没有限制
    - 功能比 pubsub 强大, 更适用于 vue 项目
-     > [返回目录](#list-two)
 
-## <a id="two-four">2.4 ajax</a>
+## <a id="two-four" class='part-part'>2.4 ajax</a>
 
 1. 相关库:
    - vue-resource: vue 插件, 多用于 vue1.x
@@ -136,9 +136,7 @@
      })
    ```
 
-   > [返回目录](#list-two)
-
-## <a id="two-five">2.5 vue-router</a>
+## <a id="two-five" class='part-part'>2.5 vue-router</a>
 
 1. vue 用来实现 SPA 的插件
 2. 使用 vue-router
@@ -199,7 +197,6 @@
    ```
 7. 路由的编程式导航
 
-- this.\$router.push(path): 相当于点击路由链接(可以返回到当前路由界面)
-- this.\$router.replace(path): 用新路由替换当前路由(不可以返回到当前路由界面)
-- this.\$router.back(): 请求(返回)上一个记录路由
-  > [返回目录](#list-two)
+   - this.\$router.push(path): 相当于点击路由链接(可以返回到当前路由界面)
+   - this.\$router.replace(path): 用新路由替换当前路由(不可以返回到当前路由界面)
+   - this.\$router.back(): 请求(返回)上一个记录路由

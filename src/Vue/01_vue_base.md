@@ -94,43 +94,50 @@
 
 5. watch
 
-- 包含多个属性监视的对象
-- 分为一般监视和深度监视
+   - 包含多个属性监视的对象
+   - 分为一般监视和深度监视
 
-```
-xxx: function(value){}
-xxx : {
-	deep : true,
-	handler : fun(value)
-}
-```
+     ```
+     xxx: function(value){}
+     xxx : {
+          deep : true,
+          handler : fun(value)
+     }
+     ```
 
-- 另一种添加监视方式:
+   - 另一种添加监视方式:
 
-```
-vm.$watch('xxx', function(value){})
-```
+     ```
+     vm.$watch('xxx', function(value){})
+     ```
 
 ### <a id="one-four" class='part-part'>1.4 Vue 过渡动画</a>
 
 - 利用 vue 去操控 css 的 transition/animation 动画
 - 模板:
   使用`<transition name='xxx'>`包含带动画的标签
-- css 样式 - .fade-enter-active: 进入过程, 指定进入的 transition - .fade-leave-active: 离开过程, 指定离开的 transition - .xxx-enter, .xxx-leave-to: 指定隐藏的样式
+- css 样式
+
+  ```
+  .fade-enter-active: 进入过程, 指定进入的 transition
+  .fade-leave-active: 离开过程, 指定离开的 transition
+  .xxx-enter, .xxx-leave-to: 指定隐藏的样式
+  ```
+
 - 编码例子
 
-```
-.xxx-enter-active, .xxx-leave-active {
-	transition: opacity .5s
-}
-.xxx-enter, .xxx-leave-to {
-	opacity: 0
-}
+  ```
+  .xxx-enter-active, .xxx-leave-active {
+       transition: opacity .5s
+  }
+  .xxx-enter, .xxx-leave-to {
+       opacity: 0
+  }
 
-<transition name="xxx">
-	<p v-if="show">hello</p>
-</transition>
-```
+  <transition name="xxx">
+       <p v-if="show">hello</p>
+  </transition>
+  ```
 
 ### <a id="one-five" class='part-part'>1.5 Vue 生命周期</a>
 
@@ -142,7 +149,9 @@ vm.$watch('xxx', function(value){})
 
 ![生命周期图](./images/vue_lifecycle.jpg)
 
-- 主要的生命周期函数(钩子) - created() / mounted(): 启动异步任务(启动定时器,发送 ajax 请求, 绑定监听) - beforeDestroy(): 做一些收尾的工作
+- 主要的生命周期函数(钩子)
+  - created() / mounted(): 启动异步任务(启动定时器,发送 ajax 请求, 绑定监听)
+  - beforeDestroy(): 做一些收尾的工作
 
 ### <a id="one-six" class='part-part'>1.6 Vue 自定义过滤器</a>
 
@@ -172,10 +181,24 @@ Vue.filter(filterName, function(value[,arg1,arg2,...]){
 - v-if : 如果 vlaue 为 true, 当前标签会输出在页面中
 - v-else : 与 v-if 一起使用, 如果 value 为 false, 将当前标签输出到页面中
 - v-show: 就会在标签中添加 display 样式, 如果 vlaue 为 true, display=block, 否则是 none
-- v-for : 遍历 - 遍历数组 : v-for="(person, index) in persons" - 遍历对象 : v-for="value in person" \$key
-- v-on : 绑定事件监听 - v-on:事件名, 可以缩写为: @事件名 - 监视具体的按键: @keyup.keyCode @keyup.enter - 停止事件的冒泡和阻止事件默认行为: @click.stop @click.prevent - 隐含对象: \$event
-- v-bind : 强制绑定解析表达式 - html 标签属性是不支持表达式的, 就可以使用 v-bind - 可以缩写为: :id='name' - :class - :class="a" - :class="{classA : isA, classB : isB}" - :class="[classA, classB]" - :style
-  :style="{color : color}"
+- v-for : 遍历
+  - 遍历数组 : v-for="(person, index) in persons"
+  - 遍历对象 : v-for="value in person" \$key
+- v-on : 绑定事件监听
+  - v-on:事件名, 可以缩写为: @事件名
+  - 监视具体的按键: @keyup.keyCode @keyup.enter
+  - 停止事件的冒泡和阻止事件默认行为: @click.stop @click.prevent
+  - 隐含对象: \$event
+- v-bind : 强制绑定解析表达式
+  - html 标签属性是不支持表达式的, 就可以使用 v-bind
+  - 可以缩写为:
+    ```
+    :id='name'
+    :class="a"
+    :class="{classA : isA, classB : isB}"
+    :class="[classA, classB]"
+    :style="{color : color}"
+    ```
 - v-model
 
   - 双向数据绑定
@@ -189,24 +212,24 @@ Vue.filter(filterName, function(value[,arg1,arg2,...]){
 
 - 注册全局指令
 
-```
-Vue.directive('my-directive', function(el, binding){
-	el.innerHTML = binding.value.toUpperCase()
-})
-```
+  ```
+  Vue.directive('my-directive', function(el, binding){
+       el.innerHTML = binding.value.toUpperCase()
+  })
+  ```
 
 - 注册局部指令
 
-```
-directives : {
-	'my-directive':function(el, binding) {
-		el.innerHTML = binding.value.toUpperCase()
-	}
-}
-```
+  ```
+  directives : {
+       'my-directive':function(el, binding) {
+            el.innerHTML = binding.value.toUpperCase()
+       }
+  }
+  ```
 
 - 使用指令
 
-```
-<div v-my-directive='xxx'>
-```
+  ```
+  <div v-my-directive='xxx'>
+  ```
