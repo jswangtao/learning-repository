@@ -159,17 +159,7 @@
   对需要显示的数据进行格式化后再显示
 
 - 编码
-```
-Vue.filter(filterName, function(value[,arg1,arg2,...]){
-	// 进行一定的数据处理
-	return newValue
-})
-```
 
-```
-<div>{{myData | filterName}}</div>
-<div>{{myData | filterName(arg)}}</div>
-```
 
 
 ### <a id="one-seven" class='part-part'>1.7 Vue 内置指令</a>
