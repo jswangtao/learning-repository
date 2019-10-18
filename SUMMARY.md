@@ -37,7 +37,7 @@
     - [DOM查询](./src/JavaScript/DOM/01_search.md)
     - [DOM修改](./src/JavaScript/DOM/02_edit.md)
     - [DOM事件](./src/JavaScript/DOM/03_event.md)
-  - [BOM](./src/JavaScript/DOM/README.md)
+  - [BOM](./src/JavaScript/BOM/README.md)
   - [高级总结](./src/JavaScript/DOM/README.md)
     - [基础总结深入](./src/JavaScript/DOM/01_search.md)
     - [函数高级](./src/JavaScript/DOM/02_edit.md)
