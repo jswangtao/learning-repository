@@ -7,5 +7,6 @@
 3. 应用:
   - 循环遍历加监听
   - 使用let取代var是趋势
-  
+
+![let](./images/let.png)
   

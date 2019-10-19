@@ -46,7 +46,7 @@
   - [JSON](./src/JavaScript/JSON/README.md)
 - [ES6 ✘](./src/ES6/README.md)
   - [let](./src/ES6/01_let.md)
-  - [const](./src/ES6/01_let.md)
+  - [const](./src/ES6/02_const.md)
   - [解构赋值](./src/ES6/01_let.md)
   - [模版字符串](./src/ES6/01_let.md)
   - [简化对象写法](./src/ES6/01_let.md)
