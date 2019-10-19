@@ -1,12 +1,20 @@
-***let
-1. 作用:
-  * 与var类似, 用于声明一个变量
-2. 特点:
-  * 在块作用域内有效
-  * 不能重复声明
-  * 不会预处理, 不存在提升
-3. 应用:
-  * 循环遍历加监听
-  * 使用let取代var是趋势
+1. rest(可变)参数
+  ```
+  用来取代arguments 但比arguments灵活,只能是最后部分形参参数
+  function add(...values) {
+    let sum = 0;
+    for(value of values) {
+      sum += value;
+    }
+    return sum;
+  }
+  ```
+2. 扩展运算符
+    ```
+    let arr1 = [1,3,5];
+    let arr2 = [2,...arr1,6];
+    arr2.push(...arr1);
+    ```
+  ![rest](./images/rest.png)
   
   
