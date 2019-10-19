@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #div1,
+      #div2 {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        position: absolute;
+      }
+      #div1 {
+        left: 0;
+        top: 0;
+      }
+      #div2 {
+        right: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">div1</div>
+    <br />
+    <div id="div2">div2</div>
+
+    <script>
+      class Drag {
+        constructor(id) {
+          this.odiv = document.querySelector(id);
+          // 在盒子内光标的距离边的位置
+          this.divX = 0;
+          this.divY = 0;
+          this.init();
+        }
+
+        init() {
+          this.odiv.onmousedown = function(event) {
+            event = window.event || event;
+            // console.log(event.clientX);
+            // 获取光标的位置
+            let mouseX = event.clientX;
+            let mouseY = event.clientY;
+            // 获取光标距边的位置
+            this.divX = mouseX - this.odiv.offsetLeft;
+            this.divY = mouseY - this.odiv.offsetTop;
+
+            // 调用移动方法
+            document.onmousemove = function() {
+              this.fnMove();
+            }.bind(this);
+            document.onmouseup = function() {
+              this.fnUp();
+            }.bind(this);
+
+            return false;
+          }.bind(this);
+        }
+
+        fnMove(event) {
+          event = window.event || event;
+          this.odiv.style.left = event.clientX - this.divX + "px";
+          this.odiv.style.top = event.clientY - this.divY + "px";
+        }
+        fnUp() {
+          document.onmousemove = null;
+          document.onmousedown =null;
+        }
+      }
+
+      class Drag2 extends Drag {
+        
+        fnMove(){
+          super.fnMove(event)
+          console.log(this.odiv.offsetLeft)
+          let leftLimit = this.odiv.offsetLeft
+          let topLimit = this.odiv.offsetTop
+          if (leftLimit<=0 ) {
+            this.odiv.style.left = 0
+          }
+          if (topLimit<=0 ) {
+            this.odiv.style.top = 0
+          }
+        }
+      }
+
+      new Drag("#div1");
+      new Drag2("#div2");
+    </script>
+
+    <!-- <script>
+      class Person {
+        constructor(name, age, sex) {
+          this.name = name;
+          this.age = age;
+          this.sex = sex;
+        }
+        is() {
+          console.log(`名字是${this.name},年龄是${this.age},性别是${this.sex}`);
+        }
+      }
+      let p1 = new Person("小明", 18, "男");
+      p1.is();
+
+      class Student extends Person {
+        constructor(name, age, sex) {
+          super(name, age, sex);
+        }
+      }
+      let student1 = new Student("小红", 22, "女");
+      student1.is();
+    </script> -->
+  </body>
+</html>

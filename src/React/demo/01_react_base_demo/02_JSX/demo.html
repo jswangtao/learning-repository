@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>02_JSX_DEMO</title>
+</head>
+<body>
+  <h2>前端JS框架列表</h2>
+  <div id="example1"></div>
+  <div id="example2"></div>
+
+  <script type="text/javascript" src="../js/react.development.js"></script>
+  <script type="text/javascript" src="../js/react-dom.development.js"></script>
+  <script type="text/javascript" src="../js/babel.min.js"></script>
+
+  <script type="text/babel">
+    /*
+     功能: 动态展示列表数据
+     */
+    /*
+     技术点:
+     1). 使用JSX创建虚拟DOM
+     2). React能自动遍历显示数组中所有的元素
+     3). array.map()的使用
+     */
+
+    // 数据的数组
+    var names = ['jquery', 'zepto', 'angular', 'react全家桶', 'vue全家桶']
+
+    
+    var lis = []
+    
+    lis= names.map(function (name,index) {
+      return <li key={index}>{name}</li>
+    })
+
+    const ul = <ul>{lis}</ul>
+
+    ReactDOM.render(ul,document.getElementById("example1"))
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,1300 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Vue 源码 · wimi 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="汪滔 - wangtao">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../public/css/style.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_vuex.html" />
+    
+    
+    <link rel="prev" href="02_vue_component_programming.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WTxiaomage","repo":"learning-repository","type":"star","count":true,"size":"small"},{"user":"WTxiaomage","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git 基本命令 ✔
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../React/">
+            
+                <a href="../React/">
+            
+                    
+                    React ✔
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../React/01_react_base.html">
+            
+                <a href="../React/01_react_base.html">
+            
+                    
+                    React 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../React/02_react_component_programming.html">
+            
+                <a href="../React/02_react_component_programming.html">
+            
+                    
+                    React 深入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../React/03_react_practice.html">
+            
+                <a href="../React/03_react_practice.html">
+            
+                    
+                    React 脚手架创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../React/04_react-router.html">
+            
+                <a href="../React/04_react-router.html">
+            
+                    
+                    React-Router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../React/05_redux.html">
+            
+                <a href="../React/05_redux.html">
+            
+                    
+                    Redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    React 源码 ✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Vue ✔
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01_vue_base.html">
+            
+                <a href="01_vue_base.html">
+            
+                    
+                    Vue 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02_vue_component_programming.html">
+            
+                <a href="02_vue_component_programming.html">
+            
+                    
+                    Vue 深入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="03_vue_source.html">
+            
+                <a href="03_vue_source.html">
+            
+                    
+                    Vue 源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04_vuex.html">
+            
+                <a href="04_vuex.html">
+            
+                    
+                    Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../JavaScript/">
+            
+                <a href="../JavaScript/">
+            
+                    
+                    JavaScript ✔
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../JavaScript/basic/">
+            
+                <a href="../JavaScript/basic/">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../JavaScript/basic/01_variable.html">
+            
+                <a href="../JavaScript/basic/01_variable.html">
+            
+                    
+                    字面量和变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../JavaScript/basic/02_identifier.html">
+            
+                <a href="../JavaScript/basic/02_identifier.html">
+            
+                    
+                    标识符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../JavaScript/basic/03_datatype.html">
+            
+                <a href="../JavaScript/basic/03_datatype.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../JavaScript/basic/04_operator.html">
+            
+                <a href="../JavaScript/basic/04_operator.html">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../JavaScript/basic/05_process_control.html">
+            
+                <a href="../JavaScript/basic/05_process_control.html">
+            
+                    
+                    流程控制语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../JavaScript/object/">
+            
+                <a href="../JavaScript/object/">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../JavaScript/object/11_object.html">
+            
+                <a href="../JavaScript/object/11_object.html">
+            
+                    
+                    对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../JavaScript/object/01_function.html">
+            
+                <a href="../JavaScript/object/01_function.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../JavaScript/object/02_scope.html">
+            
+                <a href="../JavaScript/object/02_scope.html">
+            
+                    
+                    作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../JavaScript/object/03_this.html">
+            
+                <a href="../JavaScript/object/03_this.html">
+            
+                    
+                    this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="../JavaScript/object/04_class.html">
+            
+                <a href="../JavaScript/object/04_class.html">
+            
+                    
+                    包装类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="../JavaScript/object/05_prototype.html">
+            
+                <a href="../JavaScript/object/05_prototype.html">
+            
+                    
+                    原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.7" data-path="../JavaScript/object/06_array.html">
+            
+                <a href="../JavaScript/object/06_array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.8" data-path="../JavaScript/object/07_string_func.html">
+            
+                <a href="../JavaScript/object/07_string_func.html">
+            
+                    
+                    字符串的相关方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.9" data-path="../JavaScript/object/08_regexp.html">
+            
+                <a href="../JavaScript/object/08_regexp.html">
+            
+                    
+                    正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.10" data-path="../JavaScript/object/09_date.html">
+            
+                <a href="../JavaScript/object/09_date.html">
+            
+                    
+                    Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.11" data-path="../JavaScript/object/10_math.html">
+            
+                <a href="../JavaScript/object/10_math.html">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../JavaScript/DOM/">
+            
+                <a href="../JavaScript/DOM/">
+            
+                    
+                    DOM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../JavaScript/DOM/01_search.html">
+            
+                <a href="../JavaScript/DOM/01_search.html">
+            
+                    
+                    DOM查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../JavaScript/DOM/02_edit.html">
+            
+                <a href="../JavaScript/DOM/02_edit.html">
+            
+                    
+                    DOM修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../JavaScript/DOM/03_event.html">
+            
+                <a href="../JavaScript/DOM/03_event.html">
+            
+                    
+                    DOM事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../JavaScript/BOM/">
+            
+                <a href="../JavaScript/BOM/">
+            
+                    
+                    BOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../JavaScript/high/">
+            
+                <a href="../JavaScript/high/">
+            
+                    
+                    高级总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="../JavaScript/high/01_base.html">
+            
+                <a href="../JavaScript/high/01_base.html">
+            
+                    
+                    基础总结深入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="../JavaScript/high/02_function.html">
+            
+                <a href="../JavaScript/high/02_function.html">
+            
+                    
+                    函数高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../JavaScript/high/03_object.html">
+            
+                <a href="../JavaScript/high/03_object.html">
+            
+                    
+                    对象高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="../JavaScript/high/04_thread.html">
+            
+                <a href="../JavaScript/high/04_thread.html">
+            
+                    
+                    线程机制与事件机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../JavaScript/JSON/">
+            
+                <a href="../JavaScript/JSON/">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../ES6/">
+            
+                <a href="../ES6/">
+            
+                    
+                    ES6 ✔
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../ES6/01_let.html">
+            
+                <a href="../ES6/01_let.html">
+            
+                    
+                    let
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../ES6/02_const.html">
+            
+                <a href="../ES6/02_const.html">
+            
+                    
+                    const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../ES6/03_deconstruction.html">
+            
+                <a href="../ES6/03_deconstruction.html">
+            
+                    
+                    解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../ES6/04_string.html">
+            
+                <a href="../ES6/04_string.html">
+            
+                    
+                    模版字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../ES6/05_obj.html">
+            
+                <a href="../ES6/05_obj.html">
+            
+                    
+                    简化对象写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../ES6/06_func.html">
+            
+                <a href="../ES6/06_func.html">
+            
+                    
+                    箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../ES6/07_dian.html">
+            
+                <a href="../ES6/07_dian.html">
+            
+                    
+                    点点点运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../ES6/08_xc.html">
+            
+                <a href="../ES6/08_xc.html">
+            
+                    
+                    形参默认值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../ES6/09_promise.html">
+            
+                <a href="../ES6/09_promise.html">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../ES6/10_symbol.html">
+            
+                <a href="../ES6/10_symbol.html">
+            
+                    
+                    symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../ES6/11_iterator.html">
+            
+                <a href="../ES6/11_iterator.html">
+            
+                    
+                    iterator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../ES6/12_generator.html">
+            
+                <a href="../ES6/12_generator.html">
+            
+                    
+                    generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../ES6/13_async.html">
+            
+                <a href="../ES6/13_async.html">
+            
+                    
+                    async
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../ES6/14_class.html">
+            
+                <a href="../ES6/14_class.html">
+            
+                    
+                    class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../ES6/15_module.html">
+            
+                <a href="../ES6/15_module.html">
+            
+                    
+                    module
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    TypeScript ✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    webpack ✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    node ✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../GitBook/">
+            
+                <a href="../GitBook/">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Vue 源码</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#3-vue-&#x6E90;&#x7801;&#x5206;&#x6790;"><b></b>3. Vue &#x6E90;&#x7801;&#x5206;&#x6790;</a></li><ul><li><span class="title-icon "></span><a href="#31-&#x51C6;&#x5907;"><b></b>3.1 &#x51C6;&#x5907;</a></li><li><span class="title-icon "></span><a href="#32-&#x6570;&#x636E;&#x4EE3;&#x7406;mvvmjs"><b></b>3.2 &#x6570;&#x636E;&#x4EE3;&#x7406;(MVVM.js)</a></li><li><span class="title-icon "></span><a href="#33-&#x6A21;&#x677F;&#x89E3;&#x6790;compilejs"><b></b>3.3 &#x6A21;&#x677F;&#x89E3;&#x6790;(compile.js)</a></li><li><span class="title-icon "></span><a href="#34-&#x6570;&#x636E;&#x52AB;&#x6301;--&#x6570;&#x636E;&#x7ED1;&#x5B9A;"><b></b>3.4 &#x6570;&#x636E;&#x52AB;&#x6301;--&gt;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</a></li></ul></ul></div><a href="#3-vue-&#x6E90;&#x7801;&#x5206;&#x6790;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="3-vue-&#x6E90;&#x7801;&#x5206;&#x6790;"><a name="3-vue-&#x6E90;&#x7801;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#3-vue-&#x6E90;&#x7801;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a><a id="list-three">3. Vue &#x6E90;&#x7801;&#x5206;&#x6790;</a></h1>
+<table>
+<thead>
+<tr>
+<th>&#x76EE;&#x5F55;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#three-one">3.1 &#x51C6;&#x5907;</a></td>
+</tr>
+<tr>
+<td><a href="#three-two">3.2 &#x6570;&#x636E;&#x4EE3;&#x7406;(MVVM.js)</a></td>
+</tr>
+<tr>
+<td><a href="#three-three">3.3 &#x6A21;&#x677F;&#x89E3;&#x6790;(compile.js)</a></td>
+</tr>
+<tr>
+<td><a href="#three-four">3.4 &#x6570;&#x636E;&#x52AB;&#x6301;--&gt;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/WTxiaomage/learning-repository/tree/master/src/Vue/demo/03_vue_source_demo" target="_blank">3.5 &#x6E90;&#x7801; DEMO</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="31-&#x51C6;&#x5907;"><a name="31-&#x51C6;&#x5907;" class="anchor-navigation-ex-anchor" href="#31-&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a id="three-one" class="part-part">3.1 &#x51C6;&#x5907;</a></h2>
+<ol>
+<li>[].slice.call(lis): &#x5C06;&#x4F2A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x771F;&#x6570;&#x7EC4;</li>
+<li>node.nodeType: &#x5F97;&#x5230;&#x8282;&#x70B9;&#x7C7B;&#x578B;</li>
+<li>&#x5C5E;&#x6027;<ul>
+<li>Object.defineProperty(obj, propertyName, {}): &#x7ED9;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;/&#x4FEE;&#x6539;&#x5C5E;&#x6027;(&#x6307;&#x5B9A;&#x63CF;&#x8FF0;&#x7B26;)</li>
+<li>configurable: true/false &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x91CD;&#x65B0; define</li>
+<li>enumerable: true/false &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x679A;&#x4E3E;(for..in / keys())</li>
+<li>value: &#x6307;&#x5B9A;&#x521D;&#x59CB;&#x503C;</li>
+<li>writable: true/false value &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5B58;&#x53D6;(&#x8BBF;&#x95EE;)&#x63CF;&#x8FF0;&#x7B26;</li>
+<li>get: &#x51FD;&#x6570;, &#x7528;&#x6765;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;</li>
+<li>set: &#x51FD;&#x6570;, &#x7528;&#x6765;&#x76D1;&#x89C6;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x53D8;&#x5316;</li>
+</ul>
+</li>
+<li>Object.keys(obj): &#x5F97;&#x5230;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x53EF;&#x679A;&#x4E3E;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x6570;&#x7EC4;</li>
+<li>DocumentFragment: &#x6587;&#x6863;&#x788E;&#x7247;(&#x9AD8;&#x6548;&#x6279;&#x91CF;&#x66F4;&#x65B0;&#x591A;&#x4E2A;&#x8282;&#x70B9;)</li>
+<li>obj.hasOwnProperty(prop): &#x5224;&#x65AD; prop &#x662F;&#x5426;&#x662F; obj &#x81EA;&#x8EAB;&#x7684;&#x5C5E;&#x6027;</li>
+</ol>
+<h2 id="32-&#x6570;&#x636E;&#x4EE3;&#x7406;mvvmjs"><a name="32-&#x6570;&#x636E;&#x4EE3;&#x7406;mvvmjs" class="anchor-navigation-ex-anchor" href="#32-&#x6570;&#x636E;&#x4EE3;&#x7406;mvvmjs"><i class="fa fa-link" aria-hidden="true"></i></a><a id="three-two" class="part-part">3.2 &#x6570;&#x636E;&#x4EE3;&#x7406;(MVVM.js)</a></h2>
+<ol>
+<li>&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4EE3;&#x7406;&#x5BF9;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x5C5E;&#x6027;&#x7684;&#x64CD;&#x4F5C;(&#x8BFB;/&#x5199;)</li>
+<li>&#x901A;&#x8FC7; vm &#x5BF9;&#x8C61;&#x6765;&#x4EE3;&#x7406; data &#x5BF9;&#x8C61;&#x4E2D;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x64CD;&#x4F5C;</li>
+<li>&#x597D;&#x5904;: &#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x64CD;&#x4F5C; data &#x4E2D;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x57FA;&#x672C;&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;<ul>
+<li>&#x901A;&#x8FC7; Object.defineProperty()&#x7ED9; vm &#x6DFB;&#x52A0;&#x4E0E; data &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;</li>
+<li>&#x6240;&#x6709;&#x6DFB;&#x52A0;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x5305;&#x542B; getter/setter</li>
+<li>&#x5728; getter/setter &#x5185;&#x90E8;&#x53BB;&#x64CD;&#x4F5C; data &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x6570;&#x636E;</li>
+</ul>
+</li>
+</ol>
+<h2 id="33-&#x6A21;&#x677F;&#x89E3;&#x6790;compilejs"><a name="33-&#x6A21;&#x677F;&#x89E3;&#x6790;compilejs" class="anchor-navigation-ex-anchor" href="#33-&#x6A21;&#x677F;&#x89E3;&#x6790;compilejs"><i class="fa fa-link" aria-hidden="true"></i></a><a id="three-three" class="part-part">3.3 &#x6A21;&#x677F;&#x89E3;&#x6790;(compile.js)</a></h2>
+<ol>
+<li>&#x6A21;&#x677F;&#x89E3;&#x6790;&#x7684;&#x5173;&#x952E;&#x5BF9;&#x8C61;: compile &#x5BF9;&#x8C61;</li>
+<li>&#x6A21;&#x677F;&#x89E3;&#x6790;&#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;:<ul>
+<li>&#x5C06; el &#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x53D6;&#x51FA;, &#x6DFB;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x5EFA;&#x7684;&#x6587;&#x6863; fragment &#x5BF9;&#x8C61;&#x4E2D;</li>
+<li>&#x5BF9; fragment &#x4E2D;&#x7684;&#x6240;&#x6709;&#x5C42;&#x6B21;&#x5B50;&#x8282;&#x70B9;&#x9012;&#x5F52;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x89E3;&#x6790;&#x5904;&#x7406;<ul>
+<li>&#x5BF9;&#x5927;&#x62EC;&#x53F7;&#x8868;&#x8FBE;&#x5F0F;&#x6587;&#x672C;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x89E3;&#x6790;</li>
+<li>&#x5BF9;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x6307;&#x4EE4;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x89E3;&#x6790;</li>
+<li>&#x4E8B;&#x4EF6;&#x6307;&#x4EE4;&#x89E3;&#x6790;</li>
+<li>&#x4E00;&#x822C;&#x6307;&#x4EE4;&#x89E3;&#x6790;</li>
+</ul>
+</li>
+<li>&#x5C06;&#x89E3;&#x6790;&#x540E;&#x7684; fragment &#x6DFB;&#x52A0;&#x5230; el &#x4E2D;&#x663E;&#x793A;</li>
+</ul>
+</li>
+<li>&#x89E3;&#x6790;&#x8868;&#x8FBE;&#x5F0F;&#x6587;&#x672C;&#x8282;&#x70B9;: textNode.textContent = value<ul>
+<li>&#x6839;&#x636E;&#x6B63;&#x5219;&#x5BF9;&#x8C61;&#x5F97;&#x5230;&#x5339;&#x914D;&#x51FA;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;: &#x5B50;&#x5339;&#x914D;/RegExp.$1</li>
+<li>&#x4ECE; data &#x4E2D;&#x53D6;&#x51FA;&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x503C;</li>
+<li>&#x5C06;&#x5C5E;&#x6027;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x6587;&#x672C;&#x8282;&#x70B9;&#x7684; textContent</li>
+</ul>
+</li>
+<li>&#x4E8B;&#x4EF6;&#x6307;&#x4EE4;&#x89E3;&#x6790;: elementNode.addEventListener(&#x4E8B;&#x4EF6;&#x540D;, &#x56DE;&#x8C03;&#x51FD;&#x6570;.bind(vm))
+v-on:click=&quot;test&quot;<ul>
+<li>&#x4ECE;&#x6307;&#x4EE4;&#x540D;&#x4E2D;&#x53D6;&#x51FA;&#x4E8B;&#x4EF6;&#x540D;</li>
+<li>&#x6839;&#x636E;&#x6307;&#x4EE4;&#x7684;&#x503C;(&#x8868;&#x8FBE;&#x5F0F;)&#x4ECE; methods &#x4E2D;&#x5F97;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5BF9;&#x8C61;</li>
+<li>&#x7ED9;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7ED1;&#x5B9A;&#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x540D;&#x548C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684; dom &#x4E8B;&#x4EF6;&#x76D1;&#x542C;</li>
+<li>&#x6307;&#x4EE4;&#x89E3;&#x6790;&#x5B8C;&#x540E;, &#x79FB;&#x9664;&#x6B64;&#x6307;&#x4EE4;&#x5C5E;&#x6027;</li>
+</ul>
+</li>
+<li>&#x4E00;&#x822C;&#x6307;&#x4EE4;&#x89E3;&#x6790;: elementNode.xxx = value<ul>
+<li>&#x5F97;&#x5230;&#x6307;&#x4EE4;&#x540D;&#x548C;&#x6307;&#x4EE4;&#x503C;(&#x8868;&#x8FBE;&#x5F0F;)</li>
+<li>&#x4ECE; data &#x4E2D;&#x6839;&#x636E;&#x8868;&#x8FBE;&#x5F0F;&#x5F97;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x503C;</li>
+<li>&#x6839;&#x636E;&#x6307;&#x4EE4;&#x540D;&#x786E;&#x5B9A;&#x9700;&#x8981;&#x64CD;&#x4F5C;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x4EC0;&#x4E48;&#x5C5E;&#x6027;<ul>
+<li>v-text---textContent &#x5C5E;&#x6027;</li>
+<li>v-html---innerHTML &#x5C5E;&#x6027;</li>
+<li>v-class--className &#x5C5E;&#x6027;</li>
+</ul>
+</li>
+<li>&#x5C06;&#x5F97;&#x5230;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x4E0A;</li>
+<li>&#x79FB;&#x9664;&#x5143;&#x7D20;&#x7684;&#x6307;&#x4EE4;&#x5C5E;&#x6027;</li>
+</ul>
+</li>
+</ol>
+<h2 id="34-&#x6570;&#x636E;&#x52AB;&#x6301;--&#x6570;&#x636E;&#x7ED1;&#x5B9A;"><a name="34-&#x6570;&#x636E;&#x52AB;&#x6301;--&#x6570;&#x636E;&#x7ED1;&#x5B9A;" class="anchor-navigation-ex-anchor" href="#34-&#x6570;&#x636E;&#x52AB;&#x6301;--&#x6570;&#x636E;&#x7ED1;&#x5B9A;"><i class="fa fa-link" aria-hidden="true"></i></a><a id="three-four" class="part-part">3.4 &#x6570;&#x636E;&#x52AB;&#x6301;--&gt;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</a></h2>
+<ol>
+<li>&#x6570;&#x636E;&#x7ED1;&#x5B9A;(model==&gt;View):<ul>
+<li>&#x4E00;&#x65E6;&#x66F4;&#x65B0;&#x4E86; data &#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x6570;&#x636E;, &#x6240;&#x6709;&#x754C;&#x9762;&#x4E0A;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x6216;&#x95F4;&#x63A5;&#x4F7F;&#x7528;&#x4E86;&#x6B64;&#x5C5E;&#x6027;&#x7684;&#x8282;&#x70B9;&#x90FD;&#x4F1A;&#x66F4;&#x65B0;(&#x66F4;&#x65B0;)</li>
+</ul>
+</li>
+<li>&#x6570;&#x636E;&#x52AB;&#x6301;<ul>
+<li>&#x6570;&#x636E;&#x52AB;&#x6301;&#x662F; vue &#x4E2D;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x4E00;&#x79CD;&#x6280;&#x672F;</li>
+<li>&#x57FA;&#x672C;&#x601D;&#x60F3;: &#x901A;&#x8FC7; defineProperty()&#x6765;&#x76D1;&#x89C6; data &#x4E2D;&#x6240;&#x6709;&#x5C5E;&#x6027;(&#x4EFB;&#x610F;&#x5C42;&#x6B21;)&#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;, &#x4E00;&#x65E6;&#x53D8;&#x5316;&#x5C31;&#x53BB;&#x66F4;&#x65B0;&#x754C;&#x9762;</li>
+</ul>
+</li>
+<li><p>&#x56DB;&#x4E2A;&#x91CD;&#x8981;&#x5BF9;&#x8C61;</p>
+<ul>
+<li>Observer<ul>
+<li>&#x7528;&#x6765;&#x5BF9; data &#x6240;&#x6709;&#x5C5E;&#x6027;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x52AB;&#x6301;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</li>
+<li>&#x7ED9; data &#x4E2D;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;(get/set) * &#x4E3A; data &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684; dep &#x5BF9;&#x8C61;</li>
+</ul>
+</li>
+<li>Dep(Depend)<ul>
+<li>data &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;(&#x6240;&#x6709;&#x5C42;&#x6B21;)&#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; dep &#x5BF9;&#x8C61;</li>
+<li>&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x673A;:</li>
+<li>&#x5728;&#x521D;&#x59CB;&#x5316; define data &#x4E2D;&#x5404;&#x4E2A;&#x5C5E;&#x6027;&#x65F6;&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684; dep &#x5BF9;&#x8C61;</li>
+<li>&#x5728; data &#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x65F6;</li>
+<li>&#x5BF9;&#x8C61;&#x7684;&#x7ED3;&#x6784;
+<code>{ id, // &#x6BCF;&#x4E2A;dep&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;id subs //&#x5305;&#x542B;n&#x4E2A;&#x5BF9;&#x5E94;watcher&#x7684;&#x6570;&#x7EC4;(subscribes&#x7684;&#x7B80;&#x5199;) }</code></li>
+<li>subs &#x5C5E;&#x6027;&#x8BF4;&#x660E;</li>
+<li>&#x5F53;&#x4E00;&#x4E2A; watcher &#x88AB;&#x521B;&#x5EFA;&#x65F6;, &#x5185;&#x90E8;&#x4F1A;&#x5C06;&#x5F53;&#x524D; watcher &#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x5BF9;&#x5E94;&#x7684; dep &#x5BF9;&#x8C61;&#x7684; subs &#x4E2D;</li>
+<li>&#x5F53;&#x6B64; data &#x5C5E;&#x6027;&#x7684;&#x503C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;, &#x6240;&#x6709; subs &#x4E2D;&#x7684; watcher &#x90FD;&#x4F1A;&#x6536;&#x5230;&#x66F4;&#x65B0;&#x7684;&#x901A;&#x77E5;, &#x4ECE;&#x800C;&#x6700;&#x7EC8;&#x66F4;&#x65B0;&#x5BF9;&#x5E94;&#x7684;&#x754C;&#x9762;</li>
+</ul>
+</li>
+<li>Compile<ul>
+<li>&#x7528;&#x6765;&#x89E3;&#x6790;&#x6A21;&#x677F;&#x9875;&#x9762;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;(&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;)</li>
+<li>&#x5229;&#x7528; compile &#x5BF9;&#x8C61;&#x89E3;&#x6790;&#x6A21;&#x677F;&#x9875;&#x9762;</li>
+<li>&#x6BCF;&#x89E3;&#x6790;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;(&#x975E;&#x4E8B;&#x4EF6;&#x6307;&#x4EE4;)&#x90FD;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684; watcher &#x5BF9;&#x8C61;, &#x5E76;&#x5EFA;&#x7ACB; watcher &#x4E0E; dep &#x7684;&#x5173;&#x7CFB;</li>
+<li>complie &#x4E0E; watcher &#x5173;&#x7CFB;: &#x4E00;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;</li>
+</ul>
+</li>
+<li>Watcher<ul>
+<li>&#x6A21;&#x677F;&#x4E2D;&#x6BCF;&#x4E2A;&#x975E;&#x4E8B;&#x4EF6;&#x6307;&#x4EE4;&#x6216;&#x8868;&#x8FBE;&#x5F0F;&#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; watcher &#x5BF9;&#x8C61;</li>
+<li>&#x76D1;&#x89C6;&#x5F53;&#x524D;&#x8868;&#x8FBE;&#x5F0F;&#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;</li>
+<li>&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x673A;: &#x5728;&#x521D;&#x59CB;&#x5316;&#x7F16;&#x8BD1;&#x6A21;&#x677F;&#x65F6;</li>
+<li>&#x5BF9;&#x8C61;&#x7684;&#x7EC4;&#x6210;
+<code>{ vm, //vm&#x5BF9;&#x8C61; exp, //&#x5BF9;&#x5E94;&#x6307;&#x4EE4;&#x7684;&#x8868;&#x8FBE;&#x5F0F; cb, //&#x5F53;&#x8868;&#x8FBE;&#x5F0F;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570; value, //&#x8868;&#x8FBE;&#x5F0F;&#x5F53;&#x524D;&#x7684;&#x503C; depIds //&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x5404;&#x7EA7;&#x5C5E;&#x6027;&#x6240;&#x5BF9;&#x5E94;&#x7684;dep&#x5BF9;&#x8C61;&#x7684;&#x96C6;&#x5408;&#x5BF9;&#x8C61; //&#x5C5E;&#x6027;&#x540D;&#x4E3A;dep&#x7684;id, &#x5C5E;&#x6027;&#x503C;&#x4E3A;dep }</code></li>
+</ul>
+</li>
+<li>&#x603B;&#x7ED3;: dep &#x4E0E; watcher &#x7684;&#x5173;&#x7CFB;: &#x591A;&#x5BF9;&#x591A;<ul>
+<li>&#x4E00;&#x4E2A; data &#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; dep, &#x4E00;&#x4E2A; dep &#x4E2D;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x591A;&#x4E2A; watcher(&#x6A21;&#x677F;&#x4E2D;&#x6709;&#x51E0;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x5C5E;&#x6027;)</li>
+<li>&#x6A21;&#x677F;&#x4E2D;&#x4E00;&#x4E2A;&#x975E;&#x4E8B;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; watcher, &#x4E00;&#x4E2A; watcher &#x4E2D;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x591A;&#x4E2A; dep(&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x51E0;&#x4E2A; data &#x5C5E;&#x6027;)</li>
+<li>&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x4F7F;&#x7528;&#x5230; 2 &#x4E2A;&#x6838;&#x5FC3;&#x6280;&#x672F;</li>
+<li>defineProperty() * &#x6D88;&#x606F;&#x8BA2;&#x9605;&#x4E0E;&#x53D1;&#x5E03;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A; - &#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x5355;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;(model==&gt;View)&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x7684; - &#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:</p>
+<ul>
+<li>&#x5728;&#x89E3;&#x6790; v-model &#x6307;&#x4EE4;&#x65F6;, &#x7ED9;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x6DFB;&#x52A0; input &#x76D1;&#x542C;</li>
+<li>&#x5F53; input &#x7684; value &#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;, &#x5C06;&#x6700;&#x65B0;&#x7684;&#x503C;&#x8D4B;&#x503C;&#x7ED9;&#x5F53;&#x524D;&#x8868;&#x8FBE;&#x5F0F;&#x6240;&#x5BF9;&#x5E94;&#x7684; data &#x5C5E;&#x6027;</li>
+</ul>
+</li>
+<li><p>&#x539F;&#x7406;&#x56FE;</p>
+<p><img src="images/vue_source.png" alt="mvvm&#x56FE;"></p>
+</li>
+</ol>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; WTxiaomage 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-09-30 16:32:44
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_vue_component_programming.html" class="navigation navigation-prev " aria-label="Previous page: Vue 深入">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_vuex.html" class="navigation navigation-next " aria-label="Next page: Vuex">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Vue 源码","level":"1.4.3","depth":2,"next":{"title":"Vuex","level":"1.4.4","depth":2,"path":"src/Vue/04_vuex.md","ref":"./src/Vue/04_vuex.md","articles":[]},"previous":{"title":"Vue 深入","level":"1.4.2","depth":2,"path":"src/Vue/02_vue_component_programming.md","ref":"./src/Vue/02_vue_component_programming.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","donate","tbfed-pagefooter","anchor-navigation-ex"],"styles":{"website":"./public/css/style.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy WTxiaomage 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"splitter":{},"search-pro":{},"donate":{"alipay":"https://github.com/WTxiaomage/learning-repository/blob/master/public/images/Alipay.png?raw=true","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"WTxiaomage","repo":"learning-repository","type":"star","count":true,"size":"small"},{"user":"WTxiaomage","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"汪滔 - wangtao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wimi 的文档库","language":"zh-hans","gitbook":"*","description":"wangtao 的文档库. 里面包含了个人撰写的所有前端文章，例如 Vue、React,、ECharts、微信小程序等……"},"file":{"path":"src/Vue/03_vue_source.md","mtime":"2019-09-30T08:32:44.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-19T05:18:48.734Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

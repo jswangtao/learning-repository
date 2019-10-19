@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>10_ComponentLife</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- <script type="text/javascript" src="../js/react.development.js"></script>
+    <script
+      type="text/javascript"
+      src="../js/react-dom.development.js"
+    ></script> -->
+    <script src="https://cdn.bootcss.com/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.bootcss.com/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+    <script type="text/babel">
+      class SubCounter extends React.Component {
+        componentWillMount() {
+          console.log('子组件挂载之前componentWillMount')
+        }
+
+        componentDidMount() {
+          console.log('子组件挂载完成componentDidMount')
+        }
+
+        componentWillReceiveProps() {
+          console.log('子组件将要接收到新属性componentWillReceiveProps')
+        }
+
+        shouldComponentUpdate(newProps, newState) {
+          console.log('子组件是否需要更新shouldComponentUpdate')
+          if (newProps.number < 5) return true
+          return false
+        }
+
+        componentWillUpdate() {
+          console.log('子组件将要更新componentWillUpdate')
+        }
+
+        componentDidUpdate() {
+          console.log('子组件更新完成componentDidUpdate')
+        }
+
+        componentWillUnmount() {
+          console.log('子组件将卸载componentWillUnmount')
+        }
+
+        render() {
+          console.log('子组件挂载中render')
+          return <p>{this.props.number}</p>
+        }
+      }
+
+      class Counter extends React.Component {
+        static defaultProps = {
+          //1、加载默认属性
+          name: 'react',
+          age:16.4
+        }
+
+        constructor(props) {
+          super(props)
+          //2、加载默认状态
+          this.state = { number: 1 }
+        }
+
+        // static getDerivedStateFromProps(props, state) {
+        //   console.log('父组件挂载之前getDerivedStateFromProps')
+        //   console.log(props, state)
+        //   // return {number:3}
+        //   return null
+        // }
+        
+        
+        componentWillMount() {
+          console.log('父组件挂载之前componentWillMount')
+        }
+
+        componentDidMount() {
+          
+          console.log('父组件挂载完成componentDidMount')
+        }
+
+        shouldComponentUpdate(newProps, newState) {
+          console.log('父组件是否需要更新shouldComponentUpdate')
+          if (newState.number < 15) return true
+          return false
+        }
+
+        componentWillUpdate() {
+          console.log('父组件将要更新componentWillUpdate')
+        }
+
+        componentDidUpdate(prevProps, prevState, snapshot) {
+          console.log('父组件更新完成componentDidUpdate')
+        }
+
+        handleClick = () => {
+          this.setState({
+            number: this.state.number + 1
+          })
+        }
+
+        render() {
+          console.log('父组件挂载render')
+          return (
+            <div>
+              <p>{this.state.number}</p>
+              <button onClick={this.handleClick}>+</button>
+              {this.state.number < 10 ? (
+                <SubCounter number={this.state.number} />
+              ) : null}
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<Counter />, document.getElementById('root'))
+    </script>
+  </body>
+</html>
