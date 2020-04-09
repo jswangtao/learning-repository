@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // https://www.liaoxuefeng.com/wiki/1022910821149312/1023021997355072
+
+      function Student(props) {
+        this.name = props.name || 'Unnamed'
+      }
+
+      Student.prototype.hello = function () {
+        alert('Hello, ' + this.name + '!')
+      }
+
+      // PrimaryStudent构造函数:
+      function PrimaryStudent(props) {
+        Student.call(this, props)
+        this.grade = props.grade || 1
+      }
+
+
+      // 空函数F:
+      function F() {}
+
+      // 把F的原型指向Student.prototype:
+      F.prototype = Student.prototype
+
+      // 把PrimaryStudent的原型指向一个新的F对象，F对象的原型正好指向Student.prototype:
+      PrimaryStudent.prototype = new F()
+
+      // // 把PrimaryStudent原型的构造函数修复为PrimaryStudent:
+      PrimaryStudent.prototype.constructor = PrimaryStudent
+
+      console.log('🚀🚀🚀wimi======>>>',new PrimaryStudent({}))
+
+
+     
+    </script>
+  </body>
+</html>
