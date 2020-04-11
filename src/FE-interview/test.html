@@ -7,13 +7,15 @@
   </head>
   <body>
     <script>
-      const v1 = 0,
-        v2 = '0',
-        v3 = ''
-      console.log(!v1)
-      console.log(!v2)
-      console.log(!v3)
-      console.log(v2 == false)
+      async function f() {
+        await new Promise(function (resolve, reject) {
+          throw new Error('出错了')
+        })
+      }
+
+      f()
+        .then((v) => console.log(v))
+        .catch((e) => console.log(e))
     </script>
   </body>
 </html>
