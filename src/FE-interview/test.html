@@ -4,18 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .big {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+      }
+      .small {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
   </head>
   <body>
+    <div class="big">
+      <div class="small"></div>
+    </div>
     <script>
-      async function f() {
-        await new Promise(function (resolve, reject) {
-          throw new Error('出错了')
-        })
-      }
-
-      f()
-        .then((v) => console.log(v))
-        .catch((e) => console.log(e))
+            // document.querySelector(".big").addEventListener("click",function () {
+            //   alert("big")
+            // },true)
+            // document.querySelector(".small").addEventListener("click",function () {
+            //   alert("small")
+            // },true)
+            document.body.addEventListener('click',function () {
+              alert(11111);
+          },false);
+          document.body.addEventListener('click',function () {
+              alert(222);
+          },false);
+          document.body.addEventListener('click',function () {
+              alert(333);
+          },false);
+          document.body.click();//模拟点击事件
     </script>
   </body>
 </html>

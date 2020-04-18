@@ -1,31 +1,29 @@
-import React, { useState, Component,useCallback ,useMemo} from 'react'
+import React, { useState, Component, useCallback, useMemo } from 'react'
 import './App.css'
-import Child from './Child'
+import Child1 from './Child1'
+import Child2 from './Child2'
 
+// function App() {
+//   const [num, setNum] = useState(0);
 
+//   function expensiveFn() {
+//     let result = 0;
+//     for (let i = 0; i < 10000; i++) {
+//       result += i;
+//     }
+//     console.log(result)
+//     return result;
+//   }
 
-function App() {
-  const [num, setNum] = useState(0);
+//   const base = useMemo(expensiveFn, []);
 
-  function expensiveFn() {
-    let result = 0;
-    for (let i = 0; i < 10000; i++) {
-      result += i;
-    }
-    console.log(result)
-    return result;
-  }
-
-  const base = useMemo(expensiveFn, []);
-
-  return (
-    <div className="App">
-      <h1>count：{num}</h1>
-      <button onClick={() => setNum(num + base)}>+1</button>
-    </div>
-  );
-}
-
+//   return (
+//     <div className="App">
+//       <h1>count：{num}</h1>
+//       <button onClick={() => setNum(num + base)}>+1</button>
+//     </div>
+//   );
+// }
 
 // function App() {
 //   const [title, setTitle] = useState("这是一个 title");
@@ -48,27 +46,24 @@ function App() {
 //   );
 // }
 
+class App extends Component {
+  componentWillMount() {
+    console.log('🚀🚀🚀wimi======>>>app  componentWillMount')
+  }
 
+  componentDidMount() {
+    console.log('🚀🚀🚀wimi======>>>app  componentDidMount')
+  }
 
-// class App extends Component {
-//   componentWillMount() {
-//     console.log('🚀🚀🚀wimi======>>>app  componentWillMount')
-//   }
-
-//   componentDidMount() {
-//     console.log('🚀🚀🚀wimi======>>>app  componentDidMount')
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <h1>parent</h1>
-//         <Child name="wimi"></Child>
-//       </div>
-//     )
-//   }
-// }
-
-
+  render() {
+    return (
+      <div>
+        <h1>parent</h1>
+        <Child1 name="Child1"></Child1>
+        <Child2 name="Child2"></Child2>
+      </div>
+    )
+  }
+}
 
 export default App

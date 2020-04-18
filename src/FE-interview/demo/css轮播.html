@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a,
+      .b,
+      .c {
+        float: left;
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 200px;
+      }
+      .a {
+        background-color: red;
+      }
+      .b {
+        background-color: green;
+      }
+      .c {
+        background-color: blue;
+      }
+
+      .wrapper {
+        width: 600px;
+
+        animation: lunbo 5s ease-out infinite;
+      }
+      .box {
+        width: 200px;
+        overflow: hidden;
+      }
+
+      @keyframes lunbo {
+        0%,
+        25% {
+          margin-left: 0;
+        }
+        40%,
+        65% {
+          margin-left: -200px;
+        }
+        80%,
+        100% {
+          margin-left: -400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="wrapper">
+        <div class="a">1</div>
+        <div class="b">2</div>
+        <div class="c">3</div>
+      </div>
+    </div>
+  </body>
+</html>
+˜
