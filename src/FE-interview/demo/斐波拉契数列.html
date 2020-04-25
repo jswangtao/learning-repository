@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+   <script>
+    //  https://www.jianshu.com/p/bbc7e54a98d6
+    //  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987,
+    // function fib1(n) {
+    //   if (n===0 || n ===1) {
+    //     return n
+    //   }
+    //   return fib1(n-1) + fib1(n-2)
+    // }
+    // console.log('🚀🚀🚀wimi======>>>fib1',fib1(45))
+
+    function fib2(n,current=0,next=1) {
+      if (n==0) return 0
+      if (n==1) return next
+      return fib2(n-1,next,current+next)
+    }
+    console.log('🚀🚀🚀wimi======>>>fib2',fib2(1000))
+   </script>
+  </body>
+</html>
