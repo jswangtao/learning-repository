@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function fn() {
+    //   let i = 1
+    //   debugger
+    //   return function () {
+    //     console.log('🚀🚀🚀wimi======>>>i',++i)
+    //   }
+    // }
+    // let fn1 = fn()
+    // fn1()
+    // fn1()
+    var arr = [];
+    for (var i=0;i<3;i++){
+      //使用IIFE
+      (function (i) {
+        arr[i] = function () {
+          return i;
+        };
+      })(i);
+    }
+    console.log(arr[0]());
+    console.log(arr[1]());
+    console.log(arr[2]());
+  </script>
+</body>
+</html>
