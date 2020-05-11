@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function _new(fn,...args) {
+        // 创建一个新对象
+        const obj = {}
+        // 设置原型，使__proto__指向构造函数的原型，这样，新对像就可以访问到构造函数原型上的属性与方法
+        obj.__proto__ = fn.prototype
+        // 改变this指向，这样，新对象就可以访问构造函数的属性和方法
+        const result = fn.apply(obj, args)
+        // 如果返回值是一个对象就返回该对象，否则返回构造函数的一个实例对象
+        return result instanceof Object ? result : obj
+      }
+
+      function Fn(name) {
+        this.name = name
+        this.sayName = function () {
+          console.log(this.name)
+        }
+
+        // 返回非对象
+        // return 1
+
+        // 返回对象
+        // return {
+        //   name,
+        //   sayName: this.sayName
+        // }
+      }
+
+      Fn.prototype.say = function (msg) {
+        console.log(`${this.name} ${msg}`)
+      }
+
+      // const fn = new Fn('Ksmith')
+      const fn = _new(Fn, 'Ksmith')
+      console.log('🚀🚀🚀wimi======>>>fn',fn)
+      fn.say('Hello World') // Ksmith Hello World
+      fn.sayName() // Ksmith
+      console.log(fn.name) // Ksmith
+    </script>
+  </body>
+</html>
