@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 3, 5, 7, 8, 33,22,9, 0, 2, 4, 11, 22, 33, 44, 55, 66]
+
+      // 冒泡排序
+      function bubbleSort(arr) {
+        let len = arr.length
+        for (let i = len - 1; i > 0; i--) {
+          for (let j = 0; j < i; j++) {
+            if (arr[j] > arr[j + 1]) {
+              let tmp = arr[j]
+              arr[j] = arr[j + 1]
+              arr[j + 1] = tmp
+            }
+          }
+        }
+        return arr
+      }
+
+      // 快速排序
+      function quickSort(arr) {
+        if (arr.length === 0) {
+          return []
+        }
+
+        let CIndex = Math.floor(arr.length / 2)
+        let c = arr.splice(CIndex, 1)
+        let l = []
+        let r = []
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < c) {
+            l.push(arr[i])
+          } else {
+            r.push(arr[i])
+          }
+        }
+
+        return quickSort(l).concat(c,quickSort(r))
+      }
+
+      const start = Date.now()
+      console.log('🚀🚀🚀wimi======>>>newArr', quickSort(arr))
+      const end = Date.now()
+      console.log('🚀🚀🚀wimi======>>>time', end - start)
+    </script>
+  </body>
+</html>
