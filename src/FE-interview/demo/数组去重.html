@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  
+  </head>
+  <body>
+      <script>
+        // ES6 去重
+        // function unique(arr) {
+        //   return Array.from(new Set(arr))
+        // }
+
+        // function unique(arr) {
+        //   for(let i=0;i<arr.length;i++){
+        //     for(let j = i+1;j<arr.length;j++){
+        //       if (arr[i]===arr[j]) {
+        //         arr.splice(j,1)
+        //         j--
+        //       }
+        //     }
+
+        //   }
+        //   return arr
+        // }
+
+
+        function unique(arr) {
+          return arr.filter((item,index)=>{
+            return arr.indexOf(item)===index
+          })
+        }
+
+
+        console.log('🚀🚀🚀wimi======>>>unique',unique([1,2,3,3,3,NaN,NaN,undefined,null,null,3,4,3,2]))
+
+
+      </script>
+
+  </body>
+</html>

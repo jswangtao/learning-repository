@@ -6,25 +6,24 @@
     <title>Document</title>
     <style>
       .bigbox{
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
         background-color: pink;
-
       }
-      .smallbox{
+      /* .smallbox{
         width: 100px;
         height: 100px;
         background-color: red;
-      }
+      } */
   
-      /* display:flex */
+      /*第一种： display:flex */
       /* .bigbox{
         display: flex;
         justify-content: center;
         align-items: center;
       } */
 
-      /* 定位 +margin*/
+      /*第二种： 定位 +margin*/
       /* .bigbox{
         position: relative;
       }
@@ -37,7 +36,7 @@
         margin: auto;
       } */
 
-      /* 定位+transform */
+      /* 第三种：定位+transform */
       /* .bigbox{
         position: relative;
       }
@@ -47,17 +46,46 @@
         top: 50%;
         transform: translate(-50%,-50%);
       } */
-
-      .bigbox{
+      
+      /* 第四种：定位+margin为负值（必须知道小盒子的宽高） */
+      /* .bigbox{
         position: relative;
       }
       .smallbox{
         position: absolute;
         left: 50%;
         top: 50%;
-        margin-left: 50px;
-        margin-top: 50px;
+        margin-left: -50px;
+        margin-top: -50px;
+      } */
+
+
+      /* 第五种：图片伪元素+基线 */
+      /* .bigbox{
+        text-align: center;
       }
+      .bigbox::after{
+        display: inline-block;
+        content: '';
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+      }
+      img{
+        vertical-align: middle;
+      } */
+
+      /* 第六种： */
+      .bigbox{
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+        background-image: url('../images/test.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
 
 
     </style>
