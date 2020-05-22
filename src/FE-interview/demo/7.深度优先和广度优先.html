@@ -7,42 +7,86 @@
   </head>
   <body>
     <script>
-      //节点构造函数
-      function Node(key) {
-        this.children = [] //不确定当前节点子节点数,使用数组表示
-        this.key = key //当前节点序号
+      // 先建立一棵树
+      function node(obj) {
+        var newobj = {}
+        if (obj.length == 1) {
+          newobj.value = obj[0]
+        } else if (obj.length == 0) {
+          newobj.value == null
+        } else {
+          newobj.left = node(obj[0])
+          newobj.value = obj[1]
+          newobj.right = node(obj[2])
+        }
+        return newobj
       }
 
-      //创建节点
-      let n1 = new Node(1),
-        n2 = new Node(2),
-        n3 = new Node(3),
-        n4 = new Node(4),
-        n5 = new Node(5),
-        n6 = new Node(6)
+      var root = node([[[[7], 11, [2]], 4, []], 5, [[13], 8, [[], 4, [1]]]])
 
-      //构建树
-      n1.children.push(n2, n5)
-      n2.children.push(n3, n4)
-      n5.children.push(n6)
+      console.log('🚀🚀🚀wimi======>>>root',root)
 
-      //深度优先搜索算法实现
-      function dfs(node) {
-        const stack = [node] //模拟栈
-        while (stack.length > 0) {
-          //栈中存在数据
-          const first = stack.shift() //从头部获取出栈元素
-          console.log(first.key) //打印出出栈元素序号
-          first.children
-            .slice()
-            .reverse()
-            .forEach(
-              (child) => stack.unshift(child) //从头部插入进栈元素
-            )
+      // 中序遍历
+      function goTree1(tree) {
+        if (tree.hasOwnProperty('left')) {
+          goTree1(tree.left)
+          console.log(tree.value)
+          goTree1(tree.right)
+        } else {
+          tree.value == null ? console.log('') : console.log(tree.value)
         }
       }
-      console.log('🚀🚀🚀wimi======>>>dfn',dsf(n1))
+      console.log('===============中序遍历=====================');
+      goTree1(root)
+      console.log('===============中序遍历=====================');
 
+      // 前序遍历
+      function goTree2(tree) {
+        tree.value == null ? console.log('') : console.log(tree.value)
+        if (tree.hasOwnProperty('left')) {
+          goTree2(tree.left)
+          goTree2(tree.right)
+        }
+      }
+
+      console.log('===============前序遍历=====================');
+      goTree2(root)
+      console.log('===============前序遍历=====================');
+
+      // 后序遍历
+      function goTree3(tree) {
+        if (tree.hasOwnProperty('left')) {
+          goTree3(tree.left)
+          goTree3(tree.right)
+          console.log(tree.value)
+        } else {
+          tree.value == null ? console.log('') : console.log(tree.value)
+        }
+      }
+
+      console.log('===============后序遍历=====================');
+      goTree3(root)
+      console.log('===============后序遍历=====================');
+
+      //层序遍历
+      // 层序遍历需要使用队列的数据结构，这里可以用数组来替代
+      // 这里不能使用迭代
+      function goTree4(tree) {
+        let deque = []
+        deque.push(root)
+        while (deque.length != 0) {
+          front = deque.shift()
+          if (front.hasOwnProperty('left')) {
+            deque.push(front.left)
+            deque.push(front.right)
+          }
+          front.value == null ? console.log('') : console.log(front.value)
+        }
+      }
+
+      console.log('===============层序遍历=====================');
+      goTree4(root)
+      console.log('===============层序遍历=====================');
     </script>
   </body>
 </html>
