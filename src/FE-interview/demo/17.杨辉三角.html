@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>杨辉三角</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      function combine(i, j) {
+        if (j === 0) {
+          return 1
+        } else if (j === i) {
+          return 1
+        } else {
+          return combine(i - 1, j - 1) + combine(i - 1, j)
+        }
+      }
+
+      function put(len) {
+        for (let i = 0; i < len; i++) {
+          for (let j = 0; j <= i; j++) {
+            document.write(combine(i,j) + ' ')
+          }
+          document.write('<br/>')
+        }
+      }
+      put(5)
+    </script>
+  </body>
+</html>
