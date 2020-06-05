@@ -43,6 +43,8 @@
    - git branch test(分支名) 创建新分支
    - git checkout test 切换分支
    - git branch 查看所有分支
+   - git branch -a 查看所有分支(包括远程分支)
+   - git branch -vv 查看本地分支与远程分支的关联
    - git checkout master 切换主分支
    - git merge test 合并分支
    - git branch -D test 删除分支
@@ -73,14 +75,12 @@
 
 > 通常去一家公司，需要 down 项目到本地，而我们通常将 dev 分支作为开发分支，clone 到本地后，需创建自己的分支开发
 
-1. 第一种方法(麻烦)：
+1. 第一种方法(麻烦，适合远程已有分支本地无的情况)：
    - git clone 仓库地址 (克隆下来只有 master 分支)
    - cd 本地文件夹名 (进入本地仓库)
-   - git branch dev (创建 dev 分支)
+   - git branch dev origin/dev(创建 dev 分支并与远程dev关联)
    - git checkout dev (切换到 dev 分支)
-   - git pull 远程地址 dev (拉取远程 dev 分支)
-     > 这种方法较麻烦，本地有两个分支
-2. 第二种方法(推荐)
+2. 第二种方法(推荐，适合clone新库)
    - git clone -b dev https://github.com/WTxiaomage/learning-repository.git
      > 这种方法只会 clone 远程仓库的 dev 分支到本地，本地只存在我们经常用的分支
 
